@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(./Manrope-Regular.ttf) format('ttf'),
+
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url(./Manrope-SemiBold.ttf) format('ttf'),
+
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(./Manrope-Bold.ttf) format('ttf'),
+
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(./Raleway-Regular.ttf) format('ttf'),
+
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url(./Raleway-SemiBold.ttf) format('ttf'),
+
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(./Raleway-Bold.ttf) format('ttf'),
+
+}

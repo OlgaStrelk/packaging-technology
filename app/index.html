@@ -1,0 +1,377 @@
+@@include('inc/header.html')
+<a class="intro__contact-link">
+  <button type="button" class="intro__close-btn"></button>
+  <img src="./img/user.svg" class="intro__contact-icon" alt="Связь с консультантом" />
+  <p class="intro__consultant">Связаться с консультантом</p>
+</a>
+<section class="circle">
+  <aside class="circle__item circle__item_top-left"></aside>
+  <aside class="circle__item circle__item_top-rigth"></aside>
+  <aside class="circle__item circle__item_center-rigth"></aside>
+  <aside class="circle__item circle__item_center-left"></aside>
+  <aside class="circle__item circle__item_center-bottom-rigth"></aside>
+  <aside class="circle__item circle__item_bottom-rigth"></aside>
+</section>
+
+<div class="popup popup_type_consult">
+  <div class="popup__container popup__container_type_consult">
+    <button type="button" class="popup__close popup__close_type_consult" aria-label="Закрыть"></button>
+
+    <h2 class="popup__title">Бесплатная консультация</h2>
+    <p class="popup__description">
+      Заполните личные данные и мы свяжемся с вами в ближайшее время
+    </p>
+    <form name="contact-form" class="popup__form" novalidate>
+      <ul class="popup__list">
+        <li class="popup__list-item">
+          <label class="popup__label" for="name">Ваше имя</label>
+          <input required type="text" autocomplete="off" name="name" id="name" class="popup__input"
+            placeholder="Введите ФИО" />
+        </li>
+        <li class="popup__list-item">
+          <label class="popup__label" for="number">Ваш номер телефона</label>
+          <input required type="text" autocomplete="off" name="number" id="form-field-job" class="popup__input"
+            placeholder="Введите номер телефона" />
+        </li>
+        <li class="popup__list-item_type_terms">
+          <input class="popup__checkbox checkbox_type_terms" type="checkbox" id="terms" name="terms" />
+          <label for="terms" class="popup__label checkbox-label_type_terms">Даю согласие на обработку персональных
+            данных</label>
+        </li>
+      </ul>
+      <button type="submit" class="popup__submit" aria-label="Отправить">
+        Отправить
+      </button>
+    </form>
+  </div>
+</div>
+
+<div class="popup popup_type_video">
+  <div class="popup__container  popup__container_type_video">
+    <button type="button" class="popup__close  popup__close_type_video" aria-label="Закрыть"></button>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-2VZn3gv_eI" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
+<main class="page__content">
+  <!-- <a class="intro__contact-link">
+    <button type="button" class="intro__close-btn"></button>
+    <img src="./img/user.svg" class="intro__contact-icon" alt="Связь с консультантом" />
+    <p class="intro__consultant">Связаться с консультантом</p>
+  </a> -->
+  <section class="intro">
+    <div class="intro__description">
+      <div class="intro__title-container">
+        <h1 class="intro__title">ПолиЭР</h1>
+        <picture>
+          <source srcset="./img/logo_op.svg" type="image/webp" />
+          <img class="intro__logo" src="./img/logo_op.svg" alt="Логотип" />
+        </picture>
+      </div>
+      <p class="intro__text">
+        один из лидеров по производству пищевой полимерной упаковки и ленты
+        из ПП, ПЭТ, ПС для автоматических упаковочных и термоформовочных
+        линий, выпускаемой под торговым знаком
+      </p>
+      <div class="intro__button-container">
+        <a href="catalog.html" class="intro__link">Перейти к каталогу</a>
+        <div class="intro__video-container">
+          <p class="intro__video-text">Смотреть видео</p>
+          <a href="#" class="intro__video-link"></a>
+        </div>
+      </div>
+    </div>
+    <div class="intro__wrapper">
+      <div class="intro__stamp rotation"></div>
+      <div class="slider">
+        <div class="slider__container swiper">
+          <div class="slider__wrapper swiper-wrapper">
+            <div class="slider__slide swiper-slide">
+              <article class="slider__slide-container">
+                <img class="intro__image" src="./img/slider1.png" />
+              </article>
+            </div>
+            <div class="slider__slide swiper-slide">
+              <article class="slider__slide-container">
+                <img class="intro__image" src="./img/decor.png" />
+              </article>
+            </div>
+            <div class="slider__slide swiper-slide">
+              <article class="slider__slide-container">
+                <img class="intro__image" src="./img/hermetic.png" />
+              </article>
+            </div>
+            <div class="slider__slide swiper-slide">
+              <article class="slider__slide-container">
+                <img class="intro__image" src="./img/seal.png" />
+              </article>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider__navigation">
+          <button class="slider__button slider__prev"></button>
+          <div class="slider__pagination slider__pagination-intro"></div>
+          <button class="slider__button slider__next"></button>
+        </div>
+
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="products">
+    <h2 class="products__title">Наша продукция</h2>
+    <div class="products__container">
+      <ul class="categories">
+        <p class="categories__title">Категории</p>
+        <li class="categories__category">
+          <a href="catalog.html" class="categories__link">Контейнеры для горячего</a>
+        </li>
+        <li class="categories__category">
+          <a href="catalog.html" class="categories__link">Контейнеры для холодного</a>
+        </li>
+        <li class="categories__category">
+          <a href="catalog.html" class="categories__link">Стаканы</a>
+        </li>
+        <li class="categories__category">
+          <a href="catalog.html" class="categories__link">Тарелки</a>
+        </li>
+        <li class="categories__category">
+          <a href="catalog.html" class="categories__link">Лотки под запайку</a>
+        </li>
+        <li class="categories__category">
+          <a href="catalog.html" class="categories__link">Ленты для термоформования</a>
+        </li>
+        <li class="categories__category">
+          <a href="catalog.html" class="categories__link">Упаковка с декором</a>
+        </li>
+      </ul>
+      <div class="products__images">
+        <ul class="gallery">
+          <a href="product.html" class="gallery__link">
+            <li class="gallery__item">
+              <figure class="gallery__card">
+                <picture class="gallery__card-container">
+                  <source srcset="./img/k-187.webp" type="image/webp" />
+                  <img class="gallery__card-image" src="./img/k-187.png" alt="Контейнер К-187" />
+                </picture>
+                <figcaption class="gallery__card-description">
+                  Универсальная линейка полипропиленовых контейнеров К-187
+                </figcaption>
+              </figure>
+            </li>
+          </a>
+          <a href="product.html" class="gallery__link">
+            <li class="gallery__item">
+              <figure class="gallery__card">
+                <picture class="gallery__card-container">
+                  <source srcset="./img/k-189.webp" type="image/webp" />
+                  <img class="gallery__card-image" src="./img/k-189.png" alt="Контейнер К-189" />
+                </picture>
+                <figcaption class="gallery__card-description">
+                  Контейнер К-189 для готовых блюд
+                </figcaption>
+              </figure>
+            </li>
+          </a>
+          <a href="product.html" class="gallery__link">
+            <li class="gallery__item">
+              <figure class="gallery__card">
+                <picture class="gallery__card-container">
+                  <source srcset="./img/k-127.webp" type="image/webp" />
+                  <img class="gallery__card-image" src="./img/k-127.png" alt="Контейнер К-127" />
+                </picture>
+                <figcaption class="gallery__card-description">
+                  Универсальный контейнер К-127
+                </figcaption>
+              </figure>
+            </li>
+          </a>
+          <a href="product.html" class="gallery__link">
+            <li class="gallery__item">
+              <figure class="gallery__card">
+                <picture class="gallery__card-container">
+                  <source srcset="./img/k-2016.webp" type="image/webp" />
+                  <img class="gallery__card-image" src="./img/k-2016.png" alt="Контейнер К-2016" />
+                </picture>
+                <figcaption class="gallery__card-description">
+                  Ланч-бокс К-2016 (LK) из полипропилена
+                </figcaption>
+              </figure>
+            </li>
+          </a>
+          <a href="product.html" class="gallery__link">
+            <li class="gallery__item">
+              <figure class="gallery__card">
+                <picture class="gallery__card-container">
+                  <source srcset="./img/k-190.webp" type="image/webp" />
+                  <img class="gallery__card-image" src="./img/k-190.png" alt="Контейнер К-190" />
+                </picture>
+                <figcaption class="gallery__card-description">
+                  Ланч-бокс К-190 из полипропилена
+                </figcaption>
+              </figure>
+            </li>
+          </a>
+          <a href="product.html" class="gallery__link">
+            <li class="gallery__item">
+              <figure class="gallery__card">
+                <picture class="gallery__card-container">
+                  <source srcset="./img/k-1616.webp" type="image/webp" />
+                  <img class="gallery__card-image" src="./img/k-1616.png" alt="Контейнер К-1616" />
+                </picture>
+                <figcaption class="gallery__card-description">
+                  Герметичный контейнер К-1616 из полипропилена
+                </figcaption>
+              </figure>
+            </li>
+          </a>
+          <a href="product.html" class="gallery__link">
+            <li class="gallery__item">
+              <figure class="gallery__card">
+                <picture class="gallery__card-container">
+                  <source srcset="./img/k-1212.webp" type="image/webp" />
+                  <img class="gallery__card-image" src="./img/k-1212.png" alt="Контейнер К-1212" />
+                </picture>
+                <figcaption class="gallery__card-description">
+                  Герметичный контейнер из ПП К-1212
+                </figcaption>
+              </figure>
+            </li>
+          </a>
+          <a href="product.html" class="gallery__link">
+            <li class="gallery__item">
+              <figure class="gallery__card">
+                <picture class="gallery__card-container">
+                  <source srcset="./img/k-230.webp" type="image/webp" />
+                  <img class="gallery__card-image" src="./img/k-230.png" alt="Контейнер К-230" />
+                </picture>
+                <figcaption class="gallery__card-description">
+                  Ланч-бокс для горячего К-230
+                </figcaption>
+              </figure>
+            </li>
+          </a>
+
+          <a href="product.html" class="gallery__link">
+            <li class="gallery__item">
+              <figure class="gallery__card">
+                <picture class="gallery__card-container">
+                  <source srcset="./img/k-144.webp" type="image/webp" />
+                  <img class="gallery__card-image" src="./img/k-144.png" alt="Контейнер К-144" />
+                </picture>
+                <figcaption class="gallery__card-description">
+                  Герметичные контейнеры К-144
+                </figcaption>
+              </figure>
+            </li>
+          </a>
+        </ul>
+        <a href="catalog.html" class="products__go-link">Перейти к каталогу</a>
+      </div>
+    </div>
+  </section>
+  <section class="benefit">
+    <ul class="benefit__list">
+      <li class="benefit__list-item benefit__list-hermetic">
+        <div class="benefit__cover benefit__cover-hermetic benefit__cover-hover">
+          <p class="benefit__text">Идеально герметичные</p>
+          <picture>
+            <source srcset="./img/lock.svg" type="image/webp" />
+            <img src="./img/lock.svg" class="benefit__image benefit__image-hermetic" />
+          </picture>
+        </div>
+      </li>
+      <li class="benefit__list-item benefit__list-seal">
+        <div class="benefit__cover benefit__cover-seal">
+          <p class="benefit__text">Под запайку</p>
+          <picture>
+            <source srcset="./img/seal_icon.svg" type="image/webp" />
+            <img src="./img/seal_icon.svg" class="benefit__image benefit__image-seal" />
+          </picture>
+        </div>
+      </li>
+      <li class="benefit__list-item benefit__list-decor">
+        <div class="benefit__cover benefit__cover-decor">
+          <p class="benefit__text">Упаковка с декором для настроения</p>
+          <picture>
+            <source srcset="./img/smile.svg" type="image/webp" />
+            <img src="./img/smile.svg" class="benefit__image benefit__image-decor" />
+          </picture>
+        </div>
+      </li>
+      <li class="benefit__list-item benefit__list-mix">
+        <div class="benefit__cover benefit__cover-mix">
+          <p class="benefit__text">Сочетай это!</p>
+          <picture>
+            <source srcset="./img/window.svg" type="image/webp" />
+            <img src="./img/window.svg" class="benefit__image benefit__image-mix" />
+          </picture>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="solution">
+    <picture>
+      <source srcset="./img/box.webp" type="image/webp" />
+      <img src="./img/box.png" class="solution__image" />
+    </picture>
+    <div class="solution__text-container">
+      <h2 class="solution__title">
+        Разработка упаковочных решений на заказ
+      </h2>
+      <p class="solution__text">
+        Компания PolyER производит полимерные упаковочные изделия для любых
+        видов пищевой продукции: мяса, рыбы, птицы и морепродуктов (как
+        свежих, так и замороженных), кондитерских изделий и молочных
+        продуктов, а также плодов и зелени.
+      </p>
+      <a href="#" class="solution__button">Узнать больше</a>
+    </div>
+  </section>
+  <section class="news">
+    <h2 class="news__title">Последние новости</h2>
+    <ul class="news__list">
+      <li>
+        <a class="news__link">
+          <article class="news__block">
+            <div class="news__container">
+              <img class="news__image" src="./img/news_one.png" alt="Универсальные гастроемкости СпК-3617" />
+            </div>
+            <div class="news__date">
+              <i class="news__date-icon"></i>
+              <p class="news__date-text">01.01.2023</p>
+            </div>
+            <h3 class="news__caption">
+              Универсальные гастроемкости СпК-3617
+            </h3>
+          </article>
+        </a>
+      </li>
+      <li>
+        <a class="news__link">
+          <article class="news__block">
+            <div class="news__container">
+              <img class="news__image" src="./img/news_two.png" alt="" />
+            </div>
+            <div class="news__date">
+              <i class="news__date-icon"></i>
+              <p class="news__date-text">01.01.2023</p>
+            </div>
+            <h3 class="news__caption">Приглашаем на Росупак-2022</h3>
+          </article>
+        </a>
+      </li>
+    </ul>
+    <a href="news.html" class="news__show-more-link">
+      <p class="news__show-more-text">Ко всем новостям</p>
+      <i class="news__show-more-icon"></i>
+    </a>
+  </section>
+</main>
+@@include('inc/footer.html')

@@ -1,0 +1,187 @@
+.menu
+    display: none
+@media screen and (max-width: $breakpoint_medium)
+    .burger-menu
+        display: block
+        grid-area: burger
+        position: relative
+    #nav-icon1
+        margin-left: 30px
+        z-index: 60
+        width: 32px
+        height: 32px
+        transition-duration: 1s
+        cursor: pointer
+        left: 3px
+        display: flex
+        align-items: center
+    .fixed
+        position: fixed
+    #nav-icon1
+        span
+            height: 3px
+            width: 30px
+            background-color: $black
+            border-radius: 20px
+            display: block
+            position: relative
+    #nav-icon1
+        span
+            &:before
+                left: 0
+                position: absolute
+                top: -9px
+                height: 3px
+                width: 30px
+                background-color: $black
+                content: ""
+                border-radius: 20px
+                transition-duration: 0.25s
+                transition: transform 0.25s, top 0.25s 0.25s
+    #nav-icon1
+        span
+            &:after
+                left: 0
+                position: absolute
+                top: 9px
+                height: 3px
+                width: 25px
+                background-color: $black
+                content: ""
+                border-radius: 20px
+                transition-duration: 0.25s
+                transition: transform 0.25s, top 0.25s 0.25s
+    #nav-icon1
+        &.open
+            span
+                transition-duration: 0.1s
+                transition-delay: 0.25s
+                background: transparent
+    #nav-icon1
+        &.open
+            span:before
+                transition: top 0.25s, transform 0.25s 0.25s
+                top: 0px
+                transform: rotateZ(-45deg)
+                background-color: $white
+    #nav-icon1
+        &.open
+            span:after
+                transition: top 0.4s, transform 0.25s 0.25s
+                top: 0px
+                transform: rotateZ(45deg)
+                width: 30px
+                background-color: $white
+    .fixed
+        position: fixed
+    .menu
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+        height: fit-content
+        background: $black
+        z-index: 55
+    .menu_is_active
+        display: block
+    .menu__container
+        padding: 134px 206px 62px
+        display: flex
+        flex-direction: column
+    .menu__list
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        flex-direction: column
+        gap: 35px
+    .menu__list-item
+        line-height: 24px
+        padding-bottom: 10px
+    .menu__list-item_active
+        border-bottom: 1px solid white
+    .menu__link
+        display: flex
+        gap: 10px
+        color: white
+        @include link
+        @include regularText
+        &:hover
+            @include hover
+    .menu__link_type_arrow
+        width: 24px
+        height: 24px
+        background: center center no-repeat url('../img/arrow-down-white.svg')
+    .menu__list_type_products
+        display: none
+        margin: 0
+    .menu__elements
+        margin-top: 46px
+        display: flex
+        gap: 20px
+    // .menu__form
+    .menu__search
+        margin: 0
+        width: 296px
+        height: 60px
+        border: 3px solid transparent
+        background: #eeeeee
+        border-radius: 76px
+        line-height: 50px
+        padding: 0 15px 0 57px
+        text-align: left
+        background-image: url(../img/search.svg)
+        background-repeat: no-repeat
+        background-position: bottom 15px left 22px
+        color: $black
+        @include regularText
+        &:focus-visible
+            border: 3px solid $green
+            outline: none
+            border-radius: 76px
+    .menu__call-link
+        transition: 0.5s
+        text-decoration: none
+        cursor: pointer
+        width: 296px
+        height: 60px
+        background: $green
+        border-radius: 107px
+        border: none
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $white
+        font-size: 16px
+        line-height: 24px
+        box-sizing: border-box
+        @include semiBoldManrope
+        &:hover
+            @include hover
+    .menu__call-icon
+        height: 23px
+        width: 21px
+        background: center center no-repeat url(../img/tel.svg)
+        margin-right: 13px
+    .menu__social
+        padding: 0
+        margin: 0
+        margin-top: 44px
+        display: flex
+        gap: 35px
+        justify-content: center
+    .menu__icon
+        background-color: transparent
+        background-repeat: no-repeat
+        background-position: center
+        width: 24px
+        height: 24px
+        list-style: none
+        transition: 0.5s
+        cursor: pointer
+        &:hover
+            @include hover
+    .menu__icon_type_telegram
+        background-image: url(../img/telegram-light.svg)
+    .menu__icon_type_whatsapp
+        background-image: url(../img/whatsapp-light.svg)

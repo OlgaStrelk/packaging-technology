@@ -1,0 +1,64 @@
+$color: white
+$background-repeat: no-repeat
+$transition: .5s
+$breakpoint_extra_large: 1679px
+$breakpoint_large: 1279px
+$breakpoint_medium: 1023px
+$breakpoint_small: 767px
+$breakpoint_mobile: 576px
+$breakpoint_extra_small: 360px
+$font-family: 'Manrope', Arial, Helvetica, sans-serif
+$green: #84BD00
+$black: #2c2c2c
+$gray: #F3F3F3
+$error: #BD0000
+$secondary: #A9A9A9
+$white: #fff
+
+@mixin hover
+    opacity: 0.6
+@mixin hoverText
+    text-decoration: underline
+
+@mixin link
+    text-decoration: none
+    transition: $transition
+    cursor: pointer
+@mixin button
+    background: $green
+    border-radius: 107px
+    border: none
+    color: $white
+    font-family: $font-family
+    font-style: normal
+    cursor: pointer
+@mixin list
+    list-style: none
+    padding: 0
+@mixin semiBoldManrope
+    font-family: "Manrope", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 600
+@mixin semiBoldRale
+    font-family: "Raleway", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+@mixin regularText
+    font-family: "Manrope", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+@mixin regularRale
+    font-family: "Raleway", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+@mixin boldRale
+    font-family: "Raleway", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 700
+@mixin boldManrope
+    font-family: "Manrope", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 700

@@ -1,0 +1,3067 @@
+$color: white
+$background-repeat: no-repeat
+$transition: .5s
+$breakpoint_extra_large: 1679px
+$breakpoint_large: 1279px
+$breakpoint_medium: 1023px
+$breakpoint_small: 767px
+$breakpoint_extra_small: 360px
+$font-family: 'Manrope', Arial, Helvetica, sans-serif
+$green: #84BD00
+$black: #2c2c2c
+$gray: #F3F3F3
+$error: #BD0000
+$secondary: #A9A9A9
+$white: #fff
+
+@mixin hover
+    opacity: 0.6
+@mixin hoverText
+    text-decoration: underline
+
+@mixin link
+    text-decoration: none
+    transition: $transition
+    cursor: pointer
+@mixin button
+    background: $green
+    border-radius: 107px
+    border: none
+    color: $white
+    font-family: $font-family
+    font-style: normal
+    cursor: pointer
+@mixin list
+    list-style: none
+    padding: 0
+@mixin semiBoldManrope
+    font-family: "Manrope", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 600
+@mixin semiBoldRale
+    font-family: "Raleway", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+@mixin regularText
+    font-family: "Manrope", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+@mixin regularRale
+    font-family: "Raleway", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+@mixin boldRale
+    font-family: "Raleway", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 700
+@mixin boldManrope
+    font-family: "Manrope", Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 700
+
+.page
+    background: white
+    margin: 0
+    position: relative
+
+    // @media screen and (max-width: $breakpoint_large)
+    //     padding-top: 35px
+    // @media screen and (max-width: $breakpoint_medium)
+    //     padding-top: 42px
+    // @media screen and (max-width: $breakpoint_small)
+    //     padding-top: 50px
+    // @media screen and (max-width: $breakpoint_extra_small)
+    //     padding-top: 25px
+
+    // Что за стили
+// .contacts__wrapper
+//     position: relative
+//     overflow: hidden
+
+.rotation
+    animation: rotation 30s linear infinite
+
+    @keyframes rotation
+        0%
+            transform: rotate(0deg)
+
+        100%
+            transform: rotate(360deg)
+
+.counter
+    margin: 0
+    display: flex
+    align-items: center
+    text-align: center
+
+.counter__value-button
+    margin: 0
+    box-sizing: border-box
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    &:hover
+        cursor: pointer
+
+/* about копипаст*/
+
+.about
+    display: flex
+    column-gap: 58px
+    margin: 0 auto 90px
+    justify-content: space-between
+
+.about__main
+    display: flex
+    flex-direction: column
+    gap: 16px
+.about__image-container
+    width: 100%
+    height: 613px
+    border-radius: 50px
+    overflow: hidden
+    margin-bottom: 39px
+.about__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+.about__title
+    max-width: 692px
+    font-size: 38px
+    line-height: 52px
+    color: #000000
+    margin: 0
+    @include semiBoldManrope
+
+.about__text
+    max-width: 1360px
+    line-height: 24px
+    color: #000000
+    margin: 0
+    @include regularText
+
+.row
+    display: flex
+.trade-mark
+    position: relative
+.aligncenter
+    display: table
+    margin-left: auto
+    margin-right: auto
+.about__fig
+    text-align: center
+    margin-top: 0.5em
+    margin-bottom: 1em
+.wp-block-image
+    img
+        max-width: 100%
+        height: auto
+.about-product
+    & > .info-product
+        padding-top: 21px
+        width: 100%
+        position: relative
+.col-md-6
+    -ms-flex: 0 0 50%
+    flex: 0 0 50%
+    max-width: 50%
+.main-mission
+    padding-top: 0
+.info-product
+    ul
+        list-style: none
+        margin: 0
+        padding-bottom: 10px
+        &:not(.breadcrumps)
+            li
+                &:not(.blocks-gallery-item)
+                    position: relative
+                    margin-bottom: 8px
+
+.trade-mark
+    &::after
+        position: absolute
+        left: unset
+        bottom: 2px
+        width: 24px
+        height: 22px
+        margin-left: 5px
+        content: ""
+        background-size: 24px 22px
+        background-image: url(https://polyerwp.dl71.ru/wp-content/themes/polyer/svg_icons/sp-sign.svg)
+    strong
+        color: $green
+.wp-block-image
+    .aligncenter
+        display: table
+        margin-left: auto
+        margin-right: auto
+.wp-image-1453
+    margin-bottom: 40px
+    width: 392
+    height: 125
+.logo
+    width: 213px
+    height: 74px
+    margin-right: 34px
+    transition: 0.5s
+.logo_dark
+    margin: 0 0 12px 0
+    height: 74px
+.burger-menu
+    width: 64px
+    height: 64px
+    display: none
+    cursor: pointer
+    transition: 0.5s
+    &:hover
+        @include hover
+
+.circle
+    position: absolute
+    width: 100%
+    height: 90%
+    overflow: hidden
+    pointer-events: none
+
+.circle__item
+    border-radius: 50%
+    opacity: 0.07
+    filter: blur(100px)
+    background: $green
+    position: absolute
+    z-index: -1
+.circle__item_top-left
+    width: 626px
+    height: 626px
+    top: 20px
+    left: -203px
+.circle__item_top-rigth
+    width: 561px
+    height: 591px
+    top: 166px
+    right: -190px
+.circle__item_center-rigth
+    width: 561px
+    height: 591px
+    top: 1360px
+    right: -167px
+    width: 561px
+    height: 591px
+    top: 2308px
+    left: -183px
+.circle__item_center-bottom-rigth
+    width: 604px
+    height: 604px
+    top: 2776px
+    right: -128px
+.circle__item_bottom-rigth
+    width: 561px
+    height: 591px
+    top: 4383px
+    right: -181px
+.page__content
+    box-sizing: border-box
+    max-width: 1620px
+    width: 100%
+    margin: auto
+.circle__item_catalog-top
+    width: 591px
+    height: 591px
+    top: 736px
+    right: -203px
+.circle__item_catalog-bottom
+    width: 591px
+    height: 591px
+    top: 1885px
+    left: -287px
+.intro
+    display: flex
+    -webkit-column-gap: 308px
+    -moz-column-gap: 308px
+    column-gap: 308px
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+    position: relative
+    margin: 0 auto 98px
+    &::before
+        width: 1234px
+        height: 868px
+        content: ""
+        position: absolute
+        top: 0
+        left: -150px
+        background: radial-gradient(68.34% 50% at 50% 50%,rgba(0, 0, 0, 0) 0%,$white 100%),url(../img/intro_background.png)
+        z-index: -2
+.intro__description
+    display: flex
+    flex-direction: column
+    align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    row-gap: 10px
+    max-width: 561px
+.intro__title-container
+    display: flex
+    -webkit-column-gap: 30px
+    -moz-column-gap: 30px
+    column-gap: 30px
+    align-items: center
+.intro__title
+    margin: 0
+    font-size: 111px
+    line-height: 130px
+    color: $black
+    @include boldRale
+.intro__text
+    line-height: 24px
+    color: $black
+    margin: 0 0 40px 0
+    @include regularRale
+.intro__button-container
+    width: 100%
+    display: flex
+    -webkit-column-gap: 26px
+    -moz-column-gap: 26px
+    column-gap: 26px
+    -webkit-box-pack: start
+    -ms-flex-pack: start
+    justify-content: start
+    align-items: center
+.intro__video-container
+    display: flex
+    -webkit-column-gap: 15px
+    -moz-column-gap: 15px
+    column-gap: 15px
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+    align-items: center
+    text-decoration: none
+    transition: 0.5s
+    cursor: pointer
+    &:hover
+        @include hover
+.intro__video-link
+    text-decoration: none
+    transition: 0.5s
+    cursor: pointer
+    width: 26px
+    height: 26px
+    background-image: url(../img/play.svg)
+    background-color: transparent
+    border: none
+    padding: 0
+    &:hover
+        @include hover
+.intro__video-text
+    line-height: 24px
+    margin: 0
+    color: $black
+    @include regularText
+
+.intro__link
+    background: $green
+    border-radius: 107px
+    border: none
+    color: $white
+    text-decoration: none
+    transition: 0.5s
+    cursor: pointer
+    width: 257px
+    padding: 0
+    font-size: 16px
+    line-height: 60px
+    text-align: center
+    @include semiBoldManrope
+    &:hover
+        @include hover
+.intro__close-btn
+    padding: 0
+    border: none
+    width: 15px
+    height: 15px
+    background: transparent
+    background-image: url(../img/close_white.svg)
+    background-size: contain
+    background-repeat: $background-repeat
+    position: absolute
+    top: 15px
+    left: 15px
+    cursor: pointer
+
+.intro__contact-link
+    background-repeat: no-repeat
+    background-color: $green
+    background-position: 10px 10px
+    width: 134px
+    height: 146px
+    padding: 0
+    text-decoration: none
+    transition: 0.5s
+    cursor: pointer
+    border: none
+    position: sticky
+    top: 588px
+    left: 0
+    margin: 0 0 0 auto
+
+    z-index: 5
+    border-radius: 25px 0px 0px 25px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    gap: 8px
+    padding-top: 40px
+    box-sizing: border-box
+.intro__contact-link_hidden
+    display: none
+
+.intro__consultant
+    color: rgba(255, 255, 255, 1)
+    text-align: center
+    font-family: $font-family
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 21px
+    margin: 0
+    img
+        max-width: 100%
+.intro__stamp
+    background-image: url(../img/stamp.png)
+    background-position: center center
+    background-repeat: $background-repeat
+    width: 295px
+    height: 295px
+    position: absolute
+    top: 516px
+    left: -207px
+    z-index: 2
+.intro__image
+    width: 100%
+    object-fit: cover
+    object-position: center
+.intro__wrapper
+    position: relative
+.products
+    margin: 0 auto 90px
+.products__title
+    font-size: 48px
+    line-height: 56px
+    display: flex
+    align-items: center
+    color: $black
+    margin: 0 0 67px 0
+    @include boldRale
+.products__container
+    display: flex
+    -webkit-column-gap: 50px
+    -moz-column-gap: 50px
+    column-gap: 50px
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: center
+.categories
+    list-style: none
+    padding: 0
+    background: $gray
+    border-radius: 25px
+    min-width: 394px
+    height: 716px
+    display: flex
+    flex-direction: column
+    gap: 25px
+    padding: 15px 30px 0 28px
+    box-sizing: border-box
+.categories__title
+    font-family: "Raleway"
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 67px
+    border-bottom: 1px solid #b5b5b5
+    margin: 0
+    color: $black
+.categories__category
+    width: 100%
+    background: #e3e3e3
+    background-image: url(../img/arrow_right.svg)
+    background-repeat: no-repeat
+    background-position: bottom 18px right 18px
+    border-radius: 25px
+    color: $black
+    padding-left: 20px
+    cursor: pointer
+    transition: 0.5s
+    box-sizing: border-box
+    &:hover
+        background: $green
+        color: $white
+        background-image: url(../img/arrow_right_active.svg)
+        background-repeat: no-repeat
+        background-position: bottom 18px right 18px
+.categories__link
+    text-decoration: none
+    font-family: "Raleway"
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 60px
+    color: inherit
+    display: block
+    width: 100%
+.products__images
+    display: flex
+    flex-direction: column
+    gap: 62px
+    align-items: center
+.products__link
+    background: $green
+    border-radius: 107px
+    border: none
+    color: $white
+    text-decoration: none
+    transition: 0.5s
+    cursor: pointer
+    width: 257px
+    padding: 0
+    font-size: 16px
+    line-height: 60px
+    text-align: center
+    @include semiBoldManrope
+    &:hover
+        @include hover
+.gallery
+    list-style: none
+    padding: 0
+    display: grid
+    grid-template-columns: repeat(3, 355px)
+    gap: 56px
+.gallery__catalog
+    gap: 50px
+    margin: 0
+.gallery__link
+    text-decoration: none
+.gallery__card
+    margin: 0
+    width: 355px
+    height: auto
+.gallery__card-container
+    display: block
+    height: 284px
+    max-width: 100%
+    position: relative
+    overflow: hidden
+    border-radius: 50px
+    z-index: 2
+.gallery__card-image
+    object-fit: cover
+    border-radius: 50px
+    transition: 0.5s
+    &:hover
+        z-index: -1
+        transform: scale(1.1)
+.gallery__card-description
+    margin-top: 20px
+    font-size: 16px
+    line-height: 24px
+    color: $black
+    @include semiBoldRale
+    &:hover
+        @include hoverText
+.products__go-link
+    background: $green
+    border-radius: 107px
+    border: none
+    color: $white
+    cursor: pointer
+    text-decoration: none
+    cursor: pointer
+    width: 257px
+    text-align: center
+    -ms-flex-item-align: end
+    align-self: flex-end
+    font-size: 16px
+    line-height: 60px
+    transition: 0.5s
+    @include semiBoldRale
+    &:hover
+        @include hover
+.benefit
+    margin: 0 auto 207px
+.benefit__list
+    width: 1620px
+    display: grid
+    grid-template-columns: minmax(257px, 803px) 1fr 1fr 1fr
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    gap: 15px
+    list-style: none
+    padding: 0
+
+.benefit__list-item
+    border-radius: 50px
+    width: 257px
+    height: 400px
+    transition: 0.5s
+    background-size: cover
+    background-position: center
+    position: relative
+
+    &:hover
+        width: 803px
+        overflow: hidden
+.benefit__list-hermetic
+    width: 100%
+    background-image: url(../img/hermetic.png)
+    max-width: 803px
+    overflow: hidden
+.benefit__cover
+    width: 100%
+    height: 100%
+    bottom: 0
+    left: 0
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 37, 37, 0.42)),to(rgba(0, 0, 0, 0.616)))
+    background: -o-linear-gradient(top, rgba(37, 37, 37, 0.42) 0%, rgba(0, 0, 0, 0.616) 100%)
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0.42) 0%, rgba(0, 0, 0, 0.616) 100%)
+    opacity: 0
+    transition: 0.5s
+    position: relative
+    border-radius: 50px
+    &:hover
+        opacity: 1
+        transition: 0.5s
+.benefit__cover-hermetic
+    opacity: 1
+.benefit__list-seal
+    background-image: url(../img/seal.png)
+.benefit__list-decor
+    background-image: url(../img/decor.png)
+.benefit__list-mix
+    background-image: url(../img/mix.png)
+.benefit__text
+    color: white
+    font-size: 28px
+    line-height: 38px
+    margin: 0
+    position: absolute
+    bottom: 72px
+    left: 70px
+    @include boldManrope
+.benefit__image
+    position: absolute
+    top: 50px
+    right: 50px
+.solution
+    max-width: 1620px
+    min-height: 529px
+    margin: 0 auto 97px
+    background-color: #262626
+    border-radius: 100px
+    position: relative
+    padding-top: 98px
+    box-sizing: border-box
+    &:hover
+        .solution__image
+            transition: all 0.5s ease
+            transform: scale(1.03)
+.solution__image
+    width: 812px
+    height: 593px
+    position: absolute
+    bottom: 53px
+    left: 0
+    transition: 0.5s
+.solution__text-container
+    max-width: 674px
+    width: 100%
+    display: flex
+    flex-direction: column
+    row-gap: 30px
+    margin-left: 818px
+.solution__title
+    margin: 0 0 9px 0
+    font-family: "Raleway"
+    font-style: normal
+    font-weight: 700
+    font-size: 48px
+    line-height: 56px
+    color: $white
+.solution__text
+    margin: 0
+    max-width: 505px
+    font-family: "Raleway"
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+    color: $white
+.solution__button
+    background: $green
+    border-radius: 107px
+    border: none
+    color: $white
+    cursor: pointer
+    text-decoration: none
+    transition: 0.5s
+    width: 257px
+    font-size: 16px
+    line-height: 60px
+    color: $white
+    text-align: center
+    transition: 0.5s
+    @include semiBoldManrope
+    &:hover
+        @include hover
+.news
+    margin: 92px auto 109px
+.news__title
+    margin-bottom: 65px
+    text-align: center
+    font-size: 48px
+    line-height: 66px
+    @include boldRale
+.news__list
+    padding: 0
+    margin: 0 auto
+    width: fit-content
+    list-style: none
+    display: flex
+    gap: 20px
+.news__link
+    cursor: pointer
+    transition: 0.5s
+.news__block
+    max-width: 664px
+.news__container
+    position: relative
+    height: 498px
+    max-width: 100%
+    overflow: hidden
+    border-radius: 50px
+    z-index: 2
+.news__image
+    object-fit: cover
+    border-radius: 50px
+    transition: 0.5s
+    &:hover
+        z-index: -1
+        transform: scale(1.1)
+.news__date
+    margin-top: 33px
+    display: flex
+    align-items: center
+    gap: 15px
+.news__date-icon
+    height: 20.75px
+    width: 18px
+    background: center center no-repeat url(../img/news__date-icon.svg)
+.company-news__data-container
+    margin-top: 33px
+    display: flex
+    align-items: center
+    gap: 15px
+.news__date-text
+    margin: 0
+    color: #c9c9c9
+    line-height: 24px
+    @include regularRale
+.news__caption
+    margin: 0
+    margin-top: 9px
+    font-size: 18px
+    line-height: 27px
+    @include semiBoldManrope
+    &:hover
+        @include hoverText
+.news__show-more-link
+    margin-top: 24px
+    cursor: pointer
+    transition: 0.5s
+    display: flex
+    align-items: center
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: center
+    text-decoration: none
+    color: $black
+
+.news__show-more-text
+    line-height: 24px
+    @include regularText
+    &:hover
+        @include hoverText
+.news__show-more-icon
+    margin-left: 19.5px
+    height: 24px
+    width: 11.5px
+    background: center center no-repeat url(../img/news_arrow.svg)
+.company-news
+    max-width: 1620px
+    margin: 0 auto 103px
+.company-news__main
+    display: flex
+    column-gap: 39px
+    justify-content: flex-start
+    margin-bottom: 40px
+.company-news__main-image
+    width: 800px
+    height: auto
+    border-radius: 100px
+.company-news__text-container
+    display: flex
+    row-gap: 10px
+    flex-direction: column
+.news__date_news
+    margin: 0
+.company-news__main-title
+    max-width: 645px
+    font-size: 38px
+    line-height: 57px
+    color: #000000
+    margin: 0 0 10px 0
+    @include semiBoldManrope
+.company-news__paragraph
+    max-width: 509px
+    line-height: 24px
+    margin: 0
+    color: #000000
+    @include regularText
+.company-news__paragraph-bottom
+    max-width: 509px
+    line-height: 24px
+    margin: 0
+    color: #000000
+    @include regularText
+.company-news__link
+    text-decoration: none
+    display: block
+.company-news__container
+    margin-bottom: 77px
+.company-news__list
+    max-width: 1620px
+    display: grid
+    grid-template-columns: repeat(3, 530px)
+    column-gap: 15px
+    row-gap: 25px
+    margin-bottom: 84px
+    list-style: none
+    padding: 0
+.company-news__item-list
+    background: #F3F3F3
+    border-radius: 50px
+    min-height: 509px
+    &:hover
+        .company-news__title, .company-news__news
+            @include hoverText
+.company-news__card
+    display: flex
+    flex-direction: column
+    gap: 20px
+    align-items: flex-start
+.company-news__img-wrapper
+    width: 530px
+    height: 270px
+    border-radius: 50px
+    overflow: hidden
+.company-news__image
+    width: 100%
+    height: auto
+    object-fit: cover
+    object-position: center
+    // border-radius: 50px
+.company-news__title
+    margin: 0 10px 0 30px
+    font-size: 24px
+    line-height: 36px
+    color: #000000
+    @include semiBoldManrope
+.company-news__news
+    max-width: 415px
+    margin: 0 10px 9px 30px
+    line-height: 24px
+    color: #000000
+    @include regularText
+.company-news__data
+    margin: 0 0 0 30px
+.company-news__navigation
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    gap: 48px
+    max-width: 228px
+    margin: auto
+
+.company-news__nav
+    min-width: 20px
+    max-width: 20px
+    height: 20px
+    background-color: transparent
+    border: 1.5px solid $black
+    border-radius: 4px
+    transform: matrix(-1, 0, 0, 1, 0, 0)
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: center
+    padding: 0
+    align-self: flex-end
+    transition: 0.5s
+    &:hover
+        background-color: $green
+.company-news__page
+    display: block
+    text-decoration: none
+    line-height: 24px
+    text-align: center
+    color: $black
+    border-radius: 50%
+    width: 20px
+    height: 20px
+    @include regularText
+    &:hover
+        color: $green
+.company-news__page_active
+    font-weight: 700px
+    color: $black
+.company-news__pagination
+    display: flex
+    justify-content: center
+    gap: 25px
+    font-size: 16px
+    line-height: 24px
+    color: $black
+    @include boldManrope
+.detail
+    display: flex
+    column-gap: 58px
+    margin: 0 auto 90px
+    justify-content: space-between
+
+.detail__news
+    display: flex
+    flex-direction: column
+    gap: 16px
+.detail__image-container
+    max-width: 739px
+    height: 613px
+    border-radius: 50px
+    overflow: hidden
+    margin-bottom: 39px
+.detail__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center
+.detail__date
+    margin: 0
+.detail__title
+    max-width: 692px
+    font-size: 38px
+    line-height: 52px
+    color: #000000
+    margin: 0
+    @include semiBoldManrope
+.detail__text
+    max-width: 1360px
+    line-height: 24px
+    color: #000000
+    margin: 0 0 14px 0
+    @include regularText
+.detail__subtitle
+    max-width: 692px
+    font-size: 24px
+    line-height: 36px
+    color: #000000
+    margin: 0 0 4px 0
+    @include semiBoldManrope
+.sidebar
+    width: 551px
+    border-left: 2px solid #e4e4e4
+    padding-left: 58px
+.sidebar__list
+    list-style: none
+    padding: 0
+    display: flex
+    flex-direction: column
+    gap: 20px
+.sidebar__title
+    margin: 0 0 40px 0
+    font-size: 24px
+    line-height: 33px
+    color: #000000
+    @include semiBoldManrope
+.sidebar__card
+    &:hover
+        .sidebar__text
+            @include hoverText
+.sidebar__link
+    display: flex
+    gap: 30px
+    text-decoration: none
+.sidebar__image-container
+    width: 100%
+    height: 201px
+    border-radius: 50px
+    overflow: hidden
+.sidebar__image
+    width: auto
+    height: 100%
+    object-fit: cover
+    object-position: center
+    transition: 0.5s
+    &:hover
+        transform: scale(1.1)
+.sidebar__text
+    font-size: 24px
+    line-height: 33px
+    color: #000000
+    margin: 0
+    @include semiBoldManrope
+
+.ordering__title
+    max-width: 343px
+    margin: 0
+    font-size: 38px
+    line-height: 52px
+    color: $black
+    @include link
+    @include semiBoldManrope
+.ordering__title-fill
+    font-size: 28px
+    line-height: 38px
+    color: $black
+    margin: 0 0 30px 0
+    @include semiBoldManrope
+.ordering__text
+    max-width: 409px
+    line-height: 24px
+    color: $black
+    margin: 0
+    @include regularText
+.ordering__sum
+    font-weight: 600
+    font-size: 24px
+    line-height: 36px
+    color: $black
+.ordering__link
+    display: block
+    width: 257px
+    text-decoration: none
+    font-size: 16px
+    line-height: 60px
+    text-align: center
+    color: $white
+    background-color: $green
+    border-radius: 107px
+    @include semiBoldRale
+.ordering__form
+    display: flex
+    justify-content: space-between
+
+.ordering__fieldset
+    border: none
+    display: flex
+    flex-direction: column
+    padding: 0
+.ordering__fieldset-contacts
+    gap: 10px
+    max-width: 803px
+    width: 100%
+.ordering__fieldset-cart
+    max-width: 1075px
+    width: 100%
+.ordering__fieldset-detail
+    width: 463px
+    background: $gray
+    border-radius: 50px
+    padding: 40px 37px 50px 40px
+    box-sizing: border-box
+    align-self: flex-start
+.ordering__label
+    line-height: 24px
+    color: $black
+    display: flex
+    flex-direction: column
+    gap: 10px
+    width: 100%
+    @include regularText
+.ordering__input
+    width: 100%
+    background: $secondary
+    border-radius: 76px
+    line-height: 60px
+    color: $gray
+    padding: 5px 0 5px 30px
+    box-sizing: border-box
+    border: none
+    cursor: pointer
+    @include regularText
+    &:hover
+        cursor: text
+    &:focus
+        outline: 3px solid $green
+    &:invalid
+        outline: 3px solid $error
+.ordering__contact
+    display: flex
+    gap: 15px
+    justify-content: space-between
+.ordering__error
+    color: $error
+    line-height: 24px
+    @include regularText
+.ordering__fieldset-title
+    margin: 0 0 30px 0
+    font-size: 24px
+    line-height: 36px
+    color: $black
+    @include semiBoldManrope
+.ordering__count
+    display: flex
+    justify-content: space-between
+    margin-bottom: 40px
+
+.ordering__text
+    margin: 0
+    line-height: 24px
+    color: $black
+    @include regularText
+.ordering__submit
+    padding: 0
+    border: none
+    background: $green
+    border-radius: 107px
+    font-size: 16px
+    line-height: 60px
+    color: $white
+    transition: 0.5s
+    cursor: pointer
+    text-align: center
+    margin-bottom: 20px
+    @include semiBoldRale
+    &:hover
+        @include hover
+.ordering__form-link
+    display: block
+    text-decoration: none
+    background: $gray
+    border: 1px solid $black
+    border-radius: 107px
+    font-size: 16px
+    line-height: 60px
+    color: $black
+    text-align: center
+    @include semiBoldManrope
+    &:hover
+        @include hover
+.ordering__header
+    display: flex
+    justify-content: space-between
+.ordering__list
+    list-style: none
+    padding: 0
+    margin-bottom: 110px
+.ordering__list-item
+    border-top: 1px solid $gray
+    padding-top: 20px
+    padding-bottom: 36px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &:last-of-type
+        padding-bottom: 0
+.ordering__selection
+    cursor: pointer
+    background: center center no-repeat $gray
+    width: 18px
+    height: 18px
+.ordering__checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+    & + label
+        cursor: pointer
+        display: flex
+        flex-direction: row
+        gap: 15px
+        align-items: center
+        user-select: none
+        &::before
+            content: ""
+            display: inline-block
+            width: 18px
+            height: 18px
+            flex-shrink: 0
+            flex-grow: 0
+            background: center center no-repeat $gray
+        &:hover
+            @include hover
+    &:checked
+        & + label
+            &::before
+                background-image: url(../img/checkbox_checked.svg)
+.ordering__checkbox_alone
+    width: 0
+    height: 0
+    opacity: 0
+    &:checked
+        & + .ordering__selection
+            background-image: url(../img/checkbox_checked.svg)
+.ordering__image-box
+    height: 203px
+    width: 241px
+    border: 2px solid $gray
+    overflow: hidden
+    border-radius: 50px
+    z-index: 2
+.ordering__image
+    object-fit: fill
+    width: 100%
+    height: 100%
+    transition: 0.5s
+    border-radius: 50px
+    &:hover
+        z-index: -1
+        transform: scale(1.1)
+.ordering__title_cart
+    font-family: $font-family
+    font-size: 24px
+    font-weight: 400
+    line-height: 36px
+    width: 300px
+.ordering__title-link
+    color: $black
+    @include link
+    &:hover
+        @include hoverText
+.ordering__result
+    margin: 0 22px
+    font-size: 16px
+    line-height: 24px
+    text-align: center
+    color: $black
+    @include semiBoldManrope
+.ordering__value-button
+    height: 20px
+    width: 20px
+    box-sizing: border-box
+    border: 1.5px solid $black
+    line-height: 15px
+    font-size: 18px
+    border-radius: 5px
+    &:hover
+        opacity: 0.7
+.column
+    display: flex
+    flex-direction: column
+    align-self: stretch
+    justify-content: space-between
+.ordering__price
+    align-self: flex-end
+    font-size: 24px
+    line-height: 36px
+    @include semiBoldManrope
+.ordering__delete-btn
+    padding: 0
+    padding-bottom: 3px
+    min-width: calc(63px + 24px + 10px)
+    text-align: end
+    line-height: 24px
+    align-self: flex-end
+    color: $error
+    border: none
+    background: none
+    background-image: url(../img//red_remove.svg)
+    background-repeat: no-repeat
+    background-position: left top
+    cursor: pointer
+    @include regularText
+    &:hover
+        @include hover
+.ordering__delete-btn__type_all
+    padding: 0
+    min-width: 186px
+    color: $black
+    background-image: url(../img//black_remove.svg)
+
+.catalog
+    margin: auto
+    max-width: 1620px
+.catalog__title
+    max-width: 524px
+    font-size: 48px
+    line-height: 66px
+    text-align: center
+    color: #000000
+    margin: 0 auto 127px
+    display: flex
+    justify-content: center
+    gap: 13px
+    @include boldManrope
+.catalog__title-span
+    display: block
+    width: 317px
+    color: $white
+    text-align: center
+    background: $green
+    border-radius: 40px
+    line-height: 66px
+.catalog__cards
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    column-gap: 15px
+    row-gap: 97px
+    margin-bottom: 64px
+.catalog__card-content
+    margin: 0
+.catalog__card
+    width: 390px
+    min-height: 284px
+    background: $gray
+    border-radius: 50px
+    position: relative
+    transition: 0.5s
+    &:hover
+        background: $green
+        .catalog__image-wrapper
+            transform: rotate(15deg)
+        .cataloge__text
+            color: $white
+.catalog__link
+    text-decoration: none
+.catalog__image-wrapper
+    position: absolute
+    transition: 0.5s
+    max-width: 311px
+    max-height: 249px
+    height: auto
+    right: -19px
+    top: -52px
+.catalog__image-decor
+    height: 230px
+.catalog__image
+    width: 100%
+.cataloge__text
+    position: absolute
+    left: 40px
+    bottom: 43px
+    line-height: 24px
+    color: $black
+    transition: 0.5s
+    text-decoration: none
+    @include regularText
+
+.filter
+    display: flex
+    flex-direction: column
+    gap: 30px
+    list-style: none
+    padding: 0
+    background: $gray
+    border-radius: 25px
+    min-width: 394px
+    padding: 35px 30px 0 28px
+    box-sizing: border-box
+    align-self: flex-start
+.filter__buttons
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid #b5b5b5
+    padding-bottom: 21px
+.filter__title
+    line-height: 24px
+    color: #000000
+    margin: 0
+    padding-left: 33px
+    background-image: url(../img/filter.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    max-width: 89px
+    box-sizing: border-box
+    @include regularText
+.filter__close-btn
+    border: none
+    background-color: transparent
+    padding: 0 0 0 34px
+    width: 118px
+    box-sizing: border-box
+    background-image: url(../img/close.svg)
+    background-repeat: no-repeat
+    font-family: $font-family
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 27px
+    color: $secondary
+    cursor: pointer
+    &:hover
+        text-decoration: underline
+.filter__inputs
+    padding: 0
+    display: flex
+    flex-direction: column
+    gap: 15px
+    margin-bottom: 40px
+    border: none
+.filter__label
+    line-height: 24px
+    color: $black
+    @include regularText
+.filter__input
+    -moz-appearance: none
+    -webkit-appearance: none
+    appearance: none
+    width: 100%
+    border: none
+    background: #e3e3e3
+    border-radius: 76px
+    line-height: 32px
+    padding: 5px 0 5px 20px
+    color: #939292
+    background-image: url(../img/arrow-down.svg)
+    background-repeat: no-repeat
+    background-position: top 50% right 18px
+    cursor: pointer
+    outline: none
+    box-sizing: border-box
+    @include regularText
+
+    &::-ms-expand
+        display: none
+    &:focus
+        outline: 3px solid $green
+.filter__option
+    color: $black
+.filter__option_placeholder
+    cursor: default
+.page-not-found__container
+    min-height: 1080px
+    max-width: 1123px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 173px auto 174px
+.page-not-found__grid
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    // display: grid
+    // grid-template: 507px / 798px
+    // grid-template-areas: "error"
+.page-not-found__number
+    max-width: 301px
+    min-width: 100px
+    width: 100%
+    min-height: 144px
+    max-height: 432px
+    height: 100%
+    position: relative
+.page-not-found__image-number
+    width: 100%
+    height: auto
+    object-fit: cover
+
+.page-not-found__number_type_first
+    margin-right: -97px
+    margin-top: -30px
+    z-index: 1
+.page-not-found__number_type_second
+    margin-left: -97px
+    margin-bottom: -30px
+    z-index: 3
+.page-not-found__logo
+    align-self: center
+    justify-self: center
+    grid-area: error
+    min-width: 100px
+    max-width: 428px
+    width: 100%
+    min-height: 144px
+    max-height: 421px
+    height: auto
+    position: relative
+    z-index: 2
+.page-not-found__image-logo
+    width: 100%
+    height: auto
+    object-fit: cover
+.page-not-found__title
+    width: fit-content
+    margin: 86px auto 24px
+    font-size: 28px
+    line-height: 38px
+    text-align: center
+    @include semiBoldManrope
+.page-not-found__caption
+    text-align: center
+    width: 594px
+    margin: 0 auto
+    line-height: 24px
+    @include regularText
+.navigation
+    margin-bottom: 34px
+.navigation__list
+    display: flex
+    padding: 0
+    list-style: none
+.navigation__list-item
+    display: flex
+.navigation__link
+    text-decoration: none
+    line-height: 24px
+    color: $secondary
+    @include regularText
+.navigation__link_redirect
+    &:hover
+        @include hoverText
+.navigation__link_active
+    color: $black
+    cursor: default
+.navigation__arrow
+    margin: 0 19px
+    height: 24px
+    width: 6px
+    background: center center no-repeat url("../img/contacts__arrow-grey.svg")
+.contacts__container
+    padding-bottom: 10px
+    display: flex
+    justify-content: space-between
+    min-height: 1145px
+.contacts__data
+    &:last-of-type
+        padding: 0
+        border-left: 2px solid #e4e4e4
+        padding-left: 126px
+.contacts__title
+    margin: 0
+    font-size: 28px
+    line-height: 38px
+    @include semiBoldManrope
+.contacts__as-list
+    margin: 0
+    margin-bottom: 82px
+.contacts__as-list-item
+    margin-top: 20px
+    display: flex
+    align-items: center
+.contacts__icon
+    margin-right: 13px
+    width: 24px
+    height: 24px
+.contacts__location-icon
+    background: center center no-repeat url(../img/contacts__map.svg)
+.contacts__subtitle
+    margin: 0
+    padding: 0
+    font-size: 18px
+    line-height: 27px
+    @include semiBoldManrope
+.contacts__paragraph
+    margin: 7px 0
+    display: block
+    max-width: 290px
+    text-decoration: none
+    color: $black
+    line-height: 24px
+    @include regularText
+    &:hover
+        text-decoration: underline
+.contacts__call-icon
+    background: center center no-repeat url(../img/call_green.svg)
+.contacts__email-icon
+    background: center center no-repeat url(../img/mail_green.svg)
+.contacts__map
+    display: block
+    overflow: hidden
+    transform: translateY(40px)
+    border-radius: 100px
+    width: 705px
+    height: 420px
+    z-index: 2
+    position: absolute
+    top: 0
+    left: 150px
+.contacts__wrapper
+    position: absolute
+    left: 0
+    top: 600px
+
+.contacts__map_iframe
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    border-radius: 100px
+.contacts__image
+    width: 100%
+    height: 100%
+.contacts__substrate
+    position: absolute
+    height: 500px
+    width: calc((100vw - 1620px) / 2 + (705px - 311px))
+    background: $green
+    z-index: -1
+    border-radius: 0 100px 100px 0
+    left: 0
+    top: 0px
+.contacts__form
+    margin-top: 33px
+    width: 556px
+    display: flex
+    flex-direction: column
+    gap: 15px
+.contacts__form-list
+    width: 100%
+    padding: 0
+    margin: 0
+    list-style: none
+.contacts__form-list-item
+    margin-top: 14px
+    display: flex
+    flex-direction: column
+    row-gap: 10px
+    &:first-of-type
+        margin: 0
+        display: flex
+        flex-direction: column
+    &:last-of-type
+        margin: 0
+.contacts__label
+    @include regularText
+    font-size: 16px
+    line-height: 24px
+.contacts__form-list-item_type_checkbox .contacts__label
+    margin-bottom: 10px
+    line-height: 24px
+    @include regularText
+.contacts__checkbox-label
+    padding: 15px 0
+.contacts__input
+    border: 3px solid transparent
+    box-sizing: border-box
+    padding: 0 30px
+    border-radius: 76px
+    width: 100%
+    height: 60px
+    background-color: $gray
+    color: #868686
+    @include regularText
+    line-height: 50px
+    &:focus-visible
+        border-radius: 76px
+.contacts__textarea
+    width: 100%
+    margin: 0
+    box-sizing: border-box
+    border: 3px solid transparent
+    min-height: 194px
+    border-radius: 31px
+    padding: 7px 30px 0
+    resize: none
+    background-color: $gray
+    color: #868686
+    line-height: 50px
+    @include regularText
+    &:focus-visible
+        border-radius: 31px
+.contacts__input:focus-visible,
+.contacts__textarea:focus-visible
+    border: 3px solid $green
+    outline: none
+.checkbox_type_terms
+    position: absolute
+    z-index: -1
+    opacity: 0
+    background-color: $green
+    & + label
+        cursor: pointer
+        display: flex
+        gap: 15px
+        align-items: center
+        user-select: none
+        &::before
+            content: ""
+            display: inline-block
+            margin-left: 3px
+            width: 18px
+            height: 18px
+            flex-shrink: 0
+            flex-grow: 0
+            background: center center no-repeat $gray
+    &:checked
+        & + label
+            &::before
+                background-image: url(../img/checkbox_checked.svg)
+.contacts__checkbox
+    margin: 30px 0
+.contacts__submit
+    font-size: 16px
+    line-height: 24px
+    height: 60px
+    width: 100%
+    color: $white
+    background-color: $green
+    border-radius: 107px
+    cursor: pointer
+    border: none
+    padding: 0
+    transition: 0.5s
+    @include semiBoldRale
+    &:hover
+        @include hover
+
+.empty
+    min-height: 33vh
+.slider
+    display: flex
+    flex-direction: column
+    gap: 35px
+.slider__container
+    max-width: 752px
+    height: 752px
+.slider__slide-container
+    width: 752px
+    height: 752px
+    overflow: hidden
+    border-radius: 100px 449px 100px 100px
+.slider__navigation
+    display: flex
+    justify-content: space-between
+    gap: 48px
+    max-width: 228px
+    margin: auto
+    align-items: center
+.slider__button
+    min-width: 20px
+    max-width: 20px
+    height: 20px
+    background-color: transparent
+    border: 1.5px solid $black
+    border-radius: 4px
+    transform: matrix(-1, 0, 0, 1, 0, 0)
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: center
+    padding: 0
+    transition: .5s
+    &:hover
+        @include hover
+.slider__prev
+    background-image: url(../img/prev_arrow.svg)
+.slider__next
+    background-image: url(../img/next_arrow.svg)
+    transform: rotate(360deg)
+.slider__pagination
+    margin: 0
+    display: flex
+    gap: 20px
+.swiper-pagination-bullet-active
+    background-color: $green
+.popup
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(0, 0, 0, 0.8)
+    display: flex
+    align-items: center
+    justify-content: center
+    visibility: hidden
+    z-index: 5
+    opacity: 0
+    transition: visibility 0.3s, opacity 0.3s linear
+.popup_is-opened
+    visibility: visible
+    opacity: 1
+.popup__container
+    background-color: white
+    color: black
+    border-radius: 50px
+    box-sizing: border-box
+    position: absolute
+    min-height: fit-content
+    z-index: 2
+.popup__container_type_consult
+    width: 655px
+    padding: 70px 50px 40px
+.popup__container_type_video
+    width: fit-content
+    padding: 70px 60px 40px
+.popup__title
+    margin: 0
+    margin-bottom: 10px
+    font-size: 28px
+    line-height: 38px
+    @include semiBoldManrope
+.popup__close
+    padding: 0
+    position: absolute
+    width: 32px
+    height: 32px
+    background: center center no-repeat url(../img/close-btn.svg)
+    background-color: rgba(0, 0, 0, 0)
+    border: none
+    opacity: 1
+    transition: opacity 1s linear
+    cursor: pointer
+    &:hover
+        @include hover
+.popup__close_type_consult
+    top: 40px
+    right: 40px
+.popup__close_type_video
+    top: 25px
+    right: 25px
+.popup__description
+    margin: 0
+    max-width: 361px
+    line-height: 24px
+    @include regularText
+.popup__form
+    width: 100%
+    margin-top: 30px
+.popup__list
+    margin: 0
+    margin-bottom: 30px
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 15px
+    padding: 0
+    list-style: none
+.popup__list-item_type_terms
+    margin-top: 15px
+.popup__label
+    margin-bottom: 10px
+    display: block
+    line-height: 24px
+    @include regularText
+.checkbox-label_type_terms
+    margin: 0
+.popup__input
+    margin: 0
+    padding: 0
+    padding-left: 30px
+    width: 100%
+    height: 60px
+    background: $gray
+    border-radius: 76px
+    border: none
+    line-height: 50px
+    text-align: left
+    box-sizing: border-box
+    outline: none
+    @include regularText
+    &:focus-visible
+        outline: 3px solid $green
+.popup__submit
+    padding: 0
+    font-size: 16px
+    line-height: 24px
+    height: 60px
+    width: 100%
+    color: $white
+    background-color: $green
+    border-radius: 107px
+    cursor: pointer
+    border: none
+    @include semiBoldRale
+.product
+    padding-bottom: 110px
+.product__containers
+    padding-top: 10px
+.product__title
+    margin: 0
+    font-size: 24px
+    line-height: 36px
+    @include semiBoldManrope
+.containers__title
+    margin: 0 0 20px 0
+    @include semiBoldRale
+    font-size: 24px
+    line-height: 50px
+
+.containers__gallery
+    list-style: none
+    margin: 0
+    padding: 0
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    column-gap: 15px
+    row-gap: 22px
+.container-card
+    width: 394px
+.container-card__image-box
+    height: 285px
+    width: 100%
+    border: 2px solid #F3F3F3
+    box-sizing: border-box
+    border-radius: 50px
+    object-fit: contain
+.container-card__title
+    margin: 0
+    margin-top: 20px
+    min-height: 72px
+    font-size: 24px
+    line-height: 36px
+    @include semiBoldManrope
+.container-card__list
+    list-style: none
+    padding: 0
+    margin-top: 25px
+    font-family: $font-family
+    font-size: 16px
+    line-height: 24px
+.container-card__standart
+    color: $secondary
+    font-weight: 400
+.container-card_color-container
+    display: flex
+    justify-content: flex-start
+    align-items: center
+.container-card_color-wrapper
+    display: flex
+.container-card_color
+    margin: 0
+    &:hover
+        text-decoration: underline
+        cursor: pointer
+.container-card__value
+    margin: 0
+    margin-bottom: 25px
+.container-card__ruble
+    font-size: 20px
+    line-height: 36px
+.container-card__price
+    font-size: 24px
+    line-height: 36px
+    @include boldManrope
+
+.container-card__price-text
+    font-size: 24px
+    line-height: 36px
+    @include boldManrope
+    font-weight: 300 !important
+        
+.container-card__form
+    gap: 19px
+    width: 100%
+    padding-top: 31px
+    #decrease
+        background: center center no-repeat url(../img/minus.svg)
+    #increase
+        background: center center no-repeat url(../img/plus.svg)
+    #input-wrap
+        margin: 0px
+        padding: 0px
+.container-card__form-fieldset
+    display: flex
+    border: none
+    gap: 20px
+    justify-content: center
+    padding: 0
+    align-items: center
+.container-card__value-button
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    &:hover
+        @include hover
+        cursor: pointer
+.container-card__submit
+    width: 192px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $green
+    color: $white
+    font-size: 16px
+    line-height: 24px
+    border: none
+    border-radius: 107px
+    transition: 0.5s
+    @include semiBoldManrope
+    &:hover
+        @include hover
+        cursor: pointer
+input#number
+    margin: 0px
+    padding: 0
+    border: none
+    width: 30px
+    font-size: 24px
+    line-height: 36px
+    text-align: center
+    margin: 0
+    border: 1px solid #e4e4e4
+    @include semiBoldManrope
+.product__slide-container
+    width: 355px
+.product__about
+    padding-top: 88px
+.about-product
+    margin-top: 41px
+    display: grid
+    grid-template-columns: 593px 545px
+    grid-template-rows: repeat(4, min-content) 1fr
+    gap: 28px 87px
+.about-product__list
+    margin: 0
+    padding: 0
+    padding-bottom: 4px
+    list-style: none
+    display: flex
+    height: fit-content
+    gap: 30px
+.about-product__list-item
+    width: 35px
+    height: 35px
+.about-product__description
+    margin: 0
+    line-height: 24px
+    @include regularText
+.about-product__image-box
+    grid-row-start: 1
+    grid-row-end: 6
+.recommended
+    padding-top: 75px
+.recommended__slider
+    width: 1620px
+    margin: auto
+.recommended__list
+    margin: 0
+    margin-top: 31px
+    margin-bottom: 30px
+    padding: 0
+    list-style: none
+    display: flex
+    justify-content: space-between
+    width: 100%
+.recommended__item
+    height: fit-content
+.recommended__figure
+    margin: 0
+    width: 100%
+.recommended__image
+    width: 100%
+    height: 100%
+    box-sizing: border-box
+    object-fit: contain
+    border-radius: 50px
+.recommended__caption
+    margin: 0
+    margin-top: 20px
+    font-size: 16px
+    line-height: 24px
+    @include semiBoldManrope
+
+// .logo
+//     width: 213px
+//     height: 74px
+//     margin-right: 40px
+//     transition: $transition
+//     @media screen and (max-width: $breakpoint_large)
+//         margin-right: 0
+//     @media screen and (max-width: $breakpoint_medium)
+//         width: 172px
+//         height: 60px
+//     @media screen and (max-width: $breakpoint_small)
+//         width: 129px
+//         height: 45px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         width: 98px
+//         height: 34px
+
+// .logo:hover
+//     @include hover
+
+// .logo_dark
+//     margin: 0 0 12px 0
+//     height: 74px
+
+// .burger
+//     width: 64px
+//     height: 64px
+//     display: none
+//     cursor: pointer
+//     transition: $transition
+
+//     @media screen and (max-width: $breakpoint_large)
+//         display: block
+
+// .burger:hover
+//     @include hover
+
+// .header
+//     display: flex
+//     gap: 20px
+//     justify-content: space-between
+//     align-items: center
+//     max-width: 1620px
+//     margin: 0 auto 76px
+//     @media screen and (max-width: $breakpoint_large)
+//         width: 100%
+//         padding: 0 20px 0 3px
+//         box-sizing: border-box
+//     @media screen and (max-width: $breakpoint_medium)
+//         width: 100%
+//         margin: 0 20px 0 3px
+//     @media screen and (max-width: $breakpoint_small)
+//         max-width: 403px
+//         margin: 3px 0 auto 0
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         max-width: 293px
+
+// .header__links
+//     @media screen and (max-width: $breakpoint_large)
+//         display: none
+
+// .header__link-container
+//     list-style: none
+//     display: flex
+//     gap: 41px
+//     padding: 0
+//     margin: 0
+
+// .header__link
+//     color: $black
+//     font-family: $font-family
+//     font-style: normal
+//     font-weight: 400
+//     font-size: 16px
+//     line-height: 24px
+//     @include link
+
+// .header__list-item
+//     display: flex
+//     justify-content: space-between
+//     gap: 10px
+//     position: relative
+
+// .header__link-arrow
+//     width: 24px
+//     height: 24px
+//     background-image: url(../img/arrow-down.svg)
+//     background-position: top
+//     background-repeat: $background-repeat
+// .header__products
+//     @include list
+//     width: 282px
+//     height: 306px
+//     background: $black
+//     border-radius: 0px 12px 12px 12px
+//     padding: 24px 35px 24px 20px
+//     display: flex
+//     flex-direction: column
+//     gap: 15px
+//     position: absolute
+//     top: 23px
+//     left: 0
+//     z-index: 1
+//     box-sizing: border-box
+//     visibility: hidden
+//     opacity: 0
+//     transition: .5s
+
+// .header__list-item:hover .header__products
+//     visibility: visible
+//     opacity: 1
+
+// .header__product-link
+//     @include link
+//     font-family: 'Raleway', Arial, Helvetica, sans-serif
+//     font-style: normal
+//     font-weight: 400
+//     font-size: 16px
+//     line-height: 24px
+//     color: $white
+
+// .header__social
+//     display: flex
+//     gap: 32px
+//     padding: 0
+//     margin: 0
+
+// .header__icon
+//     background-color: transparent
+//     background-repeat: $background-repeat
+//     background-position: center
+//     width: 24px
+//     height: 24px
+//     list-style: none
+//     transition: .5s
+//     cursor: pointer
+//     @media screen and (max-width: $breakpoint_large)
+//         width: 32px
+//         height: 30px
+
+// .header__icon:hover
+//     @include hover
+
+// .header__icon_type_telegram
+//     background-image: url(../img/telegram.svg)
+//     @media screen and (max-width: $breakpoint_large)
+//         display: none
+
+// .header__icon_type_whatsapp
+//     background-image: url(../img/whatsapp.svg)
+//     @media screen and (max-width: $breakpoint_large)
+//         display: none
+
+// .header__icon_type_op
+//     background-image: url(../img/op.svg)
+//     background-size: cover
+
+// .header__form
+//     @media screen and (max-width: $breakpoint_large)
+//         display: none
+
+// .header__search
+//     min-width: 296px
+//     height: 60px
+//     background: #EEEEEE
+//     border-radius: 76px
+//     border: none
+//     font-family: $font-family
+//     font-style: normal
+//     font-weight: 400
+//     font-size: 16px
+//     line-height: 50px
+//     padding: 0 15px 0 57px
+//     text-align: left
+//     background-image: url(../img/search.svg)
+//     background-repeat: $background-repeat
+//     background-position: bottom 20px left 22px
+
+// .header__call
+//     width: 257px
+//     height: 60px
+//     font-size: 16px
+//     font-weight: 600
+//     line-height: 60px
+//     display: block
+//     @include link
+//     text-align: left
+//     @include button
+//     background-image: url(../img/tel.svg)
+//     background-repeat: $background-repeat
+//     background-position: bottom 21px left 40px
+//     padding: 0 0 0 70px
+//     cursor: pointer
+//     margin-right: 12px
+//     transition: $transition
+//     box-sizing: border-box
+//     @media screen and (max-width: $breakpoint_large)
+//         display: none
+
+// .header__button:hover
+//     @include hover
+// .main
+//     // padding: 0 150px
+//     box-sizing: border-box
+//     max-width: 1620px
+//     width: 100%
+//     margin: auto
+//     @media screen and (max-width: $breakpoint_large)
+//         max-width: 1004px
+
+// .intro
+//     display: flex
+//     column-gap: 308px
+//     justify-content: space-between
+//     position: relative
+//     // max-width: 1620px
+//     // width: 100%
+//     margin: 0 auto 98px
+//     background-image: url(../img/intro_background.png)
+//     background-size: 1234px auto
+//     background-repeat: &$background-repeat
+
+//     @media screen and (max-width: $breakpoint_large)
+//         column-gap: 56px
+//         padding-left: 20px
+//     @media screen and (max-width: $breakpoint_medium)
+//         flex-direction: column-reverse
+//         row-gap: 47px
+//         align-items: center
+//         padding-left: 0
+
+// .intro__description
+//     display: flex
+//     flex-direction: column
+//     align-items: center
+//     justify-content: center
+//     row-gap: 10px
+//     max-width: 561px
+
+//     @media screen and (max-width: $breakpoint_large)
+//         max-width: 457px
+//         row-gap: 25px
+//     @media screen and (max-width: $breakpoint_medium)
+//         row-gap: 15px
+//     @media screen and (max-width: $breakpoint_small)
+//         max-width: 390px
+//         row-gap: 13px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         max-width: 280px
+//         row-gap: 19px
+
+// .intro__title-container
+//     display: flex
+//     column-gap: 30px
+//     align-items: center
+//     @media screen and (max-width: $breakpoint_small)
+//         margin: 0 0 14px 0
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         margin: 0
+
+// .intro__title
+//     margin: 0
+//     font-family: 'Raleway', Arial, Helvetica, sans-serif
+//     font-style: normal
+//     font-weight: 700
+//     font-size: 111px
+//     line-height: 130px
+//     color: $black
+//     @media screen and (max-width: $breakpoint_large)
+//         font-size: 84px
+//         line-height: 99px
+//     @media screen and (max-width: $breakpoint_small)
+//         font-size: 64px
+//         line-height: 75px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         font-size: 48px
+//         line-height: 56px
+// .intro__logo
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         width: 64px
+//         height: 58px
+// .intro__text
+//     font-family: 'Raleway', Arial, Helvetica, sans-serif
+//     font-style: normal
+//     font-weight: 400
+//     font-size: 16px
+//     line-height: 24px
+//     color: $black
+//     margin: 0 0 40px 0
+//     @media screen and (max-width: $breakpoint_large)
+//         margin: 0
+//     @media screen and (max-width: $breakpoint_medium)
+//         text-align: center
+//         margin: 0 0 18px 0
+//     @media screen and (max-width: $breakpoint_small)
+//         margin: 0
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         margin: 0 0 11px 0
+// .intro__button-container
+//     width: 100%
+//     display: flex
+//     column-gap: 26px
+//     justify-content: start
+//     align-items: center
+//     @media screen and (max-width: $breakpoint_small)
+//         flex-direction: column
+//         row-gap: 34px
+
+// .intro__video-container
+//     display: flex
+//     column-gap: 15px
+//     justify-content: space-between
+//     align-items: center
+//     @include link
+
+// .intro__video-container:hover
+//     @include hover
+
+// .intro__video-link
+//     @include link
+//     width: 26px
+//     height: 26px
+//     background-image: url(../img/play.svg)
+//     background-color: transparent
+//     border: none
+//     padding: 0
+
+// .intro__video-link:hover
+//     @include hover
+
+// .intro__video-text
+//     font-family: $font-family
+//     font-style: normal
+//     font-weight: 400
+//     font-size: 16px
+//     line-height: 24px
+//     margin: 0
+
+// .intro__image-container
+//     width: 752px
+//     height: 752px
+//     overflow: hidden
+//     @media screen and (max-width: $breakpoint_large)
+//         width: 706px
+//     @media screen and (max-width: $breakpoint_medium)
+//         width: 536px
+//         height: 537px
+//     @media screen and (max-width: $breakpoint_small)
+//         width: 347px
+//         height: 334px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         width: 280px
+//         height: 281px
+// .intro__image
+//     width: 100%
+//     height: auto
+//     @media screen and (max-width: $breakpoint_large)
+//         width: 706px
+//     @media screen and (max-width: $breakpoint_medium)
+//         width: 536px
+//     @media screen and (max-width: $breakpoint_small)
+//         width: 347px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         width: 280px
+// .intro__link
+//     @include button
+//     @include link
+//     width: 257px
+
+//     padding: 0
+//     font-family: 'Manrope'
+//     font-style: normal
+//     font-weight: 600
+//     font-size: 16px
+//     line-height: 60px
+//     text-align: center
+//     @media screen and (max-width: $breakpoint_small)
+//         width: 390px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         width: 280px
+
+// .intro__link:hover
+//     @include hover
+
+// .intro__contact-link
+//     background-image: url(../img/contact_icon.svg)
+//     background-color: transparent
+//     background-repeat: $background-repeat
+//     width: 134px
+//     height: 146px
+//     padding: 0
+//     @include link
+//     border: none
+//     position: absolute
+//     top: 570px
+//     right: 0px
+//     z-index: 1
+//     @media screen and (max-width: 1280px)
+//         background-image: url(../img/contact_icon_mini.svg)
+//         width: 30px
+//         top: 490px
+//         right: 0px
+//     @media screen and (max-width: $breakpoint_medium)
+//         display: none
+
+// .intro__stamp
+//     background-image: url(../img/stamp.png)
+//     background-repeat: $background-repeat
+//     width: 295px
+//     height: 295px
+//     position: absolute
+//     top: 533px
+//     left: 641px
+//     z-index: -1
+//     @media screen and (max-width: $breakpoint_large)
+//         top: 516px
+//         left: 381px
+//     @media screen and (max-width: $breakpoint_medium)
+//         background-size: 139px 139px
+//         width: 139px
+//         height: 139px
+//         top: 447px
+//         left: 42px
+//     @media screen and (max-width: $breakpoint_small)
+//         display: none
+// .footer
+//     background: $black
+//     max-width: 1920px
+//     width: 100%
+//     font-family: $font-family
+//     font-style: normal
+//     color: $white
+//     margin: auto
+//     display: flex
+//     justify-content: center
+//     padding: 64px 0 43px
+
+// .footer__content
+//     max-width: 1620px
+//     width: 100%
+//     margin: 0 auto
+//     display: flex
+//     justify-content: start
+//     column-gap: 55px
+//     @media screen and (max-width: $breakpoint_large)
+//         max-width: 1003px
+//     @media screen and (max-width: $breakpoint_medium)
+//         flex-direction: column
+//         align-items: center
+//         row-gap: 72px
+//     @media screen and (max-width: $breakpoint_small)
+//         max-width: 185px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         row-gap: 42px
+
+// .footer__nav
+//     display: grid
+//     grid-template-columns: minmax(min-content, 194px) minmax(min-content, 243px) minmax(min-content, 569px)
+//     column-gap: 30px
+//     align-items: start
+//     @media screen and (max-width: $breakpoint_large)
+//         grid-template-columns: minmax(min-content, 194px) minmax(min-content, 231px) minmax(min-content, 166px)
+//     @media screen and (max-width: $breakpoint_small)
+//         grid-template-columns: minmax(min-content, 185px) minmax(min-content, 185px)
+//         grid-template-areas: "product about" "product media"
+//         column-gap: 20px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         display: flex
+//         flex-direction: column
+//         align-items: center
+
+// .footer__title
+//     font-weight: 700
+//     font-size: 24px
+//     line-height: 33px
+//     margin: 0 0 8px 0
+//     @media screen and (max-width: $breakpoint_large)
+//         margin: 0
+//     @media screen and (max-width: $breakpoint_small)
+//         font-size: 18px
+//         line-height: 25px
+//         margin: 0 0 9px 0
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         text-align: center
+// .footer__title_media
+//     @media screen and (max-width: $breakpoint_small)
+//         margin: 0
+
+// .footer__title_contact
+//     @media screen and (max-width: $breakpoint_small)
+//         margin: 0 0 6px 0
+// .footer__list
+//     list-style: none
+//     padding: 0
+//     margin: 0
+//     display: flex
+//     flex-direction: column
+//     gap: 20px
+//     @media screen and (max-width: $breakpoint_large)
+//         gap: 28px
+//     @media screen and (max-width: $breakpoint_small)
+//         gap: 25px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         align-items: center
+// .footer__column
+//     display: flex
+//     column-gap: 120px
+//     justify-content: space-between
+//     @media screen and (max-width: $breakpoint_large)
+//         flex-direction: column
+//         row-gap: 33px
+//         @media screen and (max-width: $breakpoint_small)
+//             grid-area: media
+//             margin-top: -240px
+//             row-gap: 53px
+//         @media screen and (max-width: $breakpoint_extra_small)
+//             flex-direction: column
+//             align-items: center
+//             margin-top: 0
+
+// .footer__list_product
+//     @media screen and (max-width: $breakpoint_small)
+//         grid-area: product
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         flex-direction: column
+//         align-items: center
+// .footer__list_about
+//     margin-right: 48px
+//     @media screen and (max-width: $breakpoint_small)
+//         grid-area: about
+//         margin-right: 0
+
+// .footer__list_media
+//     max-width: 152px
+//     width: 100%
+
+// .footer__list-contact
+//     max-width: 297px
+//     width: 100%
+
+// .footer__list-item
+//     @media screen and (max-width: $breakpoint_large)
+//         margin: 0 0 7px 0
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         text-align: center
+
+// .footer__link
+//     color: $white
+//     font-weight: 400
+//     font-size: 16px
+//     line-height: 24px
+//     @include link
+//     @media screen and (max-width: $breakpoint_small)
+//         font-size: 15px
+//         line-height: 22px
+
+// .footer__link:hover
+//     @include hover
+
+// .footer__contact
+//     display: flex
+//     flex-direction: column
+//     gap: 25px
+//     @media screen and (max-width: $breakpoint_medium)
+//         align-items: center
+//         gap: 35px
+
+// .footer__social-container
+//     display: flex
+//     gap: 29px
+//     margin-bottom: 2px
+
+// .footer__social-icon
+//     @include link
+
+// .footer__social-icon:hover
+//     @include hover
+
+// .footer__telegram-icon
+//     background-repeat: $background-repeat
+//     background-position: center
+//     background-image: url(../img/telegram-light.svg)
+//     display: block
+//     width: 24px
+//     height: 24px
+
+// .footer__whatsapp-icon
+//     background-repeat: $background-repeat
+//     background-position: center
+//     background-image: url(../img/whatsapp-light.svg)
+//     display: block
+//     width: 24px
+//     height: 24px
+
+// .footer__social-icon
+//     color: $white
+// .products
+//     margin: 0 auto 90px
+
+//     @media screen and (max-width: $breakpoint_large)
+//         padding: 0 20px
+//         box-sizing: border-box
+//         margin-bottom: 89px
+//     @media screen and (max-width: $breakpoint_medium)
+//         margin-bottom: 94px
+//     @media screen and (max-width: $breakpoint_small)
+//         margin-bottom: 29px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         margin-bottom: 51px
+// .products__title
+//     font-family: 'Raleway', Arial, Helvetica, sans-serif
+//     font-style: normal
+//     font-weight: 700
+//     font-size: 48px
+//     line-height: 56px
+//     display: flex
+//     align-items: center
+//     color: $black
+//     margin: 0 0 67px 0
+//     @media screen and (max-width: $breakpoint_large)
+//         margin: 0 0 77px 0
+//     @media screen and (max-width: $breakpoint_medium)
+//         margin: 0 0 67px 0
+//     @media screen and (max-width: $breakpoint_small)
+//         font-size: 28px
+//         line-height: 33px
+//         margin: 0 0 40px 0
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         font-size: 22px
+//         line-height: 26px
+//         margin: 0 0 30px 0
+
+// .products__container
+//     display: flex
+//     column-gap: 50px
+//     justify-content: space-between
+
+//     @media screen and (max-width: $breakpoint_large)
+//         column-gap: 20px
+
+//     @media screen and (max-width: $breakpoint_medium)
+//         flex-direction: column
+//         row-gap: 20px
+
+//     @media screen and (max-width: $breakpoint_small)
+//         row-gap: 57px
+
+// .categories
+//     @include list
+//     background: $secondary
+//     border-radius: 25px
+//     min-width: 394px
+//     height: 716px
+//     display: flex
+//     flex-direction: column
+//     gap: 25px
+//     padding: 15px 30px 0 28px
+//     box-sizing: border-box
+//     @media screen and (max-width: $breakpoint_large)
+//         min-width: 315px
+//         min-height: 716px
+//         padding: 15px 14px 0 14px
+//     @media screen and (max-width: $breakpoint_small)
+//         width: 100%
+//         min-height: 580px
+//         padding: 13px 33px 0 27px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         max-width: 280px
+//         min-width: 280px
+//         min-height: 580px
+//         padding: 11px 20px 0 27px
+//         box-sizing: border-box
+// .categories__title
+//     font-family: 'Raleway'
+//     font-style: normal
+//     font-weight: 400
+//     font-size: 18px
+//     line-height: 67px
+//     border-bottom: 1px solid #B5B5B5
+//     margin: 0
+//     color: $black
+//     @media screen and (max-width: $breakpoint_small)
+//         font-size: 17px
+//         line-height: 69px
+// .categories__category
+//     // width: 336px
+//     width: 100%
+//     background: #E3E3E3
+//     background-image: url(../img/arrow_right.svg)
+//     background-repeat: $background-repeat
+//     background-position: bottom 18px right 18px
+//     border-radius: 25px
+//     font-family: 'Raleway'
+//     font-style: normal
+//     font-weight: 400
+//     font-size: 16px
+//     line-height: 60px
+//     color: $black
+//     padding-left: 20px
+//     cursor: pointer
+//     transition: .5s
+//     box-sizing: border-box
+//     @media screen and (max-width: $breakpoint_small)
+//         font-size: 15px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         background-position: bottom 18px right 7px
+// .categories__category:active
+//     background: $green
+//     color: $white
+//     background-image: url(../img/arrow_right_active.svg)
+//     background-repeat: $background-repeat
+//     background-position: bottom 18px right 18px
+// .products__images
+//     display: flex
+//     flex-direction: column
+//     gap: 62px
+//     align-items: center
+//     @media screen and (max-width: $breakpoint_large)
+//         gap: 57px
+//     @media screen and (max-width: $breakpoint_medium)
+//         gap: 67px
+//     @media screen and (max-width: $breakpoint_small)
+//         gap: 37px
+//         @media screen and (max-width: $breakpoint_extra_small)
+//             gap: 40px
+
+// .gallery
+//     @include list
+//     display: grid
+//     grid-template-columns: repeat(3, 355px)
+//     gap: 56px
+//     @media screen and (max-width: $breakpoint_large)
+//         grid-template-columns: repeat(2, minmax(190px, 313px))
+//         column-gap: 22px
+//         row-gap: 56px
+//     @media screen and (max-width: $breakpoint_medium)
+//         grid-template-columns: repeat(2, minmax(220px, 1fr))
+//         column-gap: 19px
+//     @media screen and (max-width: $breakpoint_small)
+//         grid-template-columns: repeat(2, 185px)
+//         column-gap: 20px
+//         row-gap: 30px
+//         @media screen and (max-width: $breakpoint_small)
+//             grid-template-columns: repeat(2, 129px)
+//             column-gap: 21px
+//             row-gap: 21px
+// .gallery__card
+//     margin: 0
+//     width: 355px
+//     height: auto
+//     @media screen and (max-width: $breakpoint_large)
+//         width: 100%
+//     @media screen and (max-width: $breakpoint_medium)
+//         width: 100%
+// .gallery__card-image
+//     // border-radius: 50px
+//     margin: 0 0 20px 0
+//     @media screen and (max-width: $breakpoint_large)
+//         width: 100%
+//     @media screen and (max-width: $breakpoint_medium)
+//         width: 100%
+// .gallery__card-description
+//     font-family: 'Raleway', Arial, Helvetica, sans-serif
+//     font-style: normal
+//     font-weight: 600
+//     font-size: 16px
+//     line-height: 24px
+//     color: $black
+//     @media screen and (max-width: $breakpoint_small)
+//         font-size: 15px
+//     @media screen and (max-width: $breakpoint_extra_small)
+//         font-size: 13px
+
+// .products__go-link
+//     @include button
+//     @include link
+//     width: 257px
+//     text-align: center
+//     align-self: flex-end
+//     font-family: 'Raleway', Arial, Helvetica, sans-serif
+//     font-style: normal
+//     font-weight: 600
+//     font-size: 16px
+//     line-height: 60px
+//     transition: .5s
+//     @media screen and (max-width: $breakpoint_large)
+//         align-self: flex-start
+//         margin-left: 20px
+//     @media screen and (max-width: $breakpoint_medium)
+//         width: 342px
+//         align-self: center
+//         margin: 0
+//     @media screen and (max-width: $breakpoint_small)
+//         width: 100%
+// .products__go-link:hover
+//     @include hover
+// .benefit
+//     margin: 0 auto 207px
+// .benefit__list
+//     width: 1620px
+//     display: flex
+//     justify-content: center
+//     gap: 15px
+//     @include list
+
+// .benefit__list-item
+//     border-radius: 50px
+//     width: 257px
+//     height: 400px
+//     transition: .5s
+//     background-size: cover
+//     background-position: center
+//     position: relative
+
+// .benefit__list-item:hover
+//     width: 803px
+//     overflow: hidden
+// .benefit__cover
+//     width: 100%
+//     height: 100%
+//     bottom: 0
+//     left: 0
+//     background: linear-gradient(180deg, rgba(37, 37, 37, 0.42) 0%, rgba(0, 0, 0, 0.616) 100%)
+//     opacity: 0
+//     transition: .5s
+//     cursor: pointer
+//     position: relative
+
+// .benefit__cover:hover
+//     opacity: 1
+//     transition: .5s
+
+// .benefit__list-hermetic
+//     background-image: url(../img/hermetic.png)
+// .benefit__list-seal
+//     background-image: url(../img/seal.png)
+// .benefit__list-decor
+//     background-image: url(../img/decor.png)
+
+// .benefit__list-mix
+//     background-image: url(../img/mix.png)
+
+// .benefit__text
+//     color: $whitef
+//     font-family: $font-family
+//     font-style: normal
+//     font-weight: 700
+//     font-size: 28px
+//     line-height: 38px
+//     margin: 0
+//     position: absolute
+//     bottom: 72px
+//     left: 70px
+// .benefit__image
+//     position: absolute
+//     top: 50px
+//     right: 50px
+
+// .solution
+//     max-width: 1620px
+//     min-height: 529px
+//     margin: 0 auto 97px
+//     background-color: #262626
+//     border-radius: 100px
+//     position: relative
+//     padding-top: 98px
+//     box-sizing: border-box
+// .solution__image
+//     width: 812px
+//     height: 593px
+//     position: absolute
+//     bottom: 53px
+//     left: 0
+
+// .solution__text-container
+//     max-width: 674px
+//     width: 100%
+//     display: flex
+//     flex-direction: column
+//     row-gap: 30px
+//     margin-left: 818px
+// .solution__title
+//     margin: 0 0 9px 0
+//     font-family: 'Raleway'
+//     font-style: normal
+//     font-weight: 700
+//     font-size: 48px
+//     line-height: 56px
+//     color: $white
+// .solution__text
+//     margin: 0
+//     max-width: 505px
+//     font-family: 'Raleway'
+//     font-style: normal
+//     font-weight: 400
+//     font-size: 16px
+//     line-height: 24px
+//     color: $white
+// .solution__button
+//     @include button
+//     @include link
+//     width: 257px
+//     font-family: 'Raleway'
+//     font-style: normal
+//     font-weight: 600
+//     font-size: 16px
+//     line-height: 60px
+//     color: $white
+//     text-align: center
+//     transition: .5s
+// .solution__button:hover
+//     @include hover
+
+// .news
+//     margin-top: 92px auto 109px
+// .news__title
+//     margin-bottom: 65px
+//     font-size: 48px
+//     font-weight: 700
+//     line-height: 66px
+// .news__container
+//     height: 498px
+//     width: 664px
+// .news__image
+//     width: 100%
+//     height: 100%
+//     border-radius: 50px
+// .news__date
+//     color: #C9C9C9
+//     font-size: 16px
+//     font-weight: 400
+//     line-height: 24px
+
+.container-card__form
+    display: flex
+
+.product__advice.recommended
+    .recommended__slider
+        width: 100%
+        height: fit-content
+        min-height: 448px
+
+.container-card
+    width: 24%
+    max-width: 394px
+
+.container-card__title
+    font-size: 22px
+
+.recommended__list.swiper-wrapper
+    min-height: 340px
+
+.contacts__textarea
+    padding: 20px
+
+.checkbox_type_terms + label
+    margin: 10px 0
+
+.container-card__image-box
+    overflow: hidden
+    transition: 0.5s
+
+.container-card__image-box img
+    transition: 0.5s
+
+.container-card__image-box img:hover
+    transform: scale(1.1)
+    transition: 0.5s
+
+.container-card__value
+    margin-bottom: 12px
+
+.container-card__list
+    margin-top: 12px
+
+.company-news__card picture
+    overflow: hidden
+    border-radius: 50px
+
+.company-news__card picture img
+    transition: 0.5s
+
+.company-news__card picture img:hover
+    transform: scale(1.1)
+    transition: 0.5s
+
+.vertival-hr
+    display: none
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button 
+    -webkit-appearance: none
+
+input[type='number'], input[type="number"]:hover, input[type="number"]:focus 
+    appearance: none
+    -moz-appearance: textfield
+

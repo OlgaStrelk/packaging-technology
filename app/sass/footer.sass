@@ -1,0 +1,235 @@
+.footer
+    width: 100%
+    background: $black
+.footer__container
+    max-width: 1920px
+    width: 100%
+    font-family: $font-family
+    font-style: normal
+    color: $white
+    margin: auto
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    padding: 64px 0 43px
+.footer__container_type_ordering
+    padding: 0
+    display: flex
+.footer__content
+    max-width: 1620px
+    width: 100%
+    margin: 0 auto
+    display: flex
+    -webkit-box-pack: start
+    -ms-flex-pack: start
+    justify-content: start
+    -webkit-column-gap: 55px
+    -moz-column-gap: 55px
+    column-gap: 55px
+.footer__nav
+    display: grid
+    grid-template-columns: minmax(-webkit-min-content, 194px) minmax(-webkit-min-content, 243px) minmax(-webkit-min-content, 569px)
+    grid-template-columns: minmax(min-content, 194px) minmax(min-content, 243px) minmax(min-content, 569px)
+    -webkit-column-gap: 30px
+    -moz-column-gap: 30px
+    column-gap: 30px
+    -webkit-box-align: start
+    -ms-flex-align: start
+    align-items: start
+.footer__title
+    font-weight: 700
+    font-size: 24px
+    line-height: 33px
+    margin: 0 0 8px 0
+    text-decoration: none
+    color: $white
+    display: block
+    &:hover
+        text-decoration: underline
+.footer__list
+    list-style: none
+    padding: 0
+    margin: 0
+    display: flex
+    flex-direction: column
+    gap: 20px
+.footer__column
+    display: flex
+    -webkit-column-gap: 120px
+    -moz-column-gap: 120px
+    column-gap: 120px
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+.footer__list_about
+    margin-right: 48px
+.footer__list_media
+    max-width: 152px
+    width: 100%
+.footer__list-contact
+    max-width: 297px
+    width: 100%
+.footer__link
+    color: $white
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+    text-decoration: none
+    transition: 0.5s
+    cursor: pointer
+    &:hover
+        text-decoration: underline
+.footer__contact
+    display: flex
+    flex-direction: column
+    gap: 25px
+.footer__social-container
+    display: flex
+    gap: 29px
+    margin-bottom: 2px
+.footer__social-icon
+    align-items: center
+    gap: 16px
+    text-decoration: none
+    transition: 0.5s
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: left
+    background-image: url(../img/telegram-light.svg)
+    color: $white
+    &:hover
+        @include hover
+.footer__call
+    color: $white
+    text-decoration: none
+    display: block
+    background: left no-repeat url(../img/footer__call.svg)
+    padding: 0 0 0 34px
+    box-sizing: border-box
+    &:hover
+        text-decoration: underline
+.footer__email
+    color: $white
+    text-decoration: none
+    display: block
+    background: left no-repeat url(../img/mail.svg)
+    padding: 0 0 0 34px
+    box-sizing: border-box
+    &:hover
+        text-decoration: underline
+.footer__telegram-icon
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url(../img/telegram-light.svg)
+    display: block
+    width: 24px
+    height: 24px
+.footer__whatsapp-icon
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url(../img/whatsapp-light.svg)
+    display: block
+    width: 24px
+    height: 24px
+.footer__contact_type_ordering
+    max-width: 1620px
+    width: 100%
+    flex-direction: row
+    justify-content: space-between
+
+@media screen and (max-width: $breakpoint_large)
+    .footer__content
+        max-width: 1003px
+    .footer__nav
+        grid-template-columns: minmax(min-content, 194px) minmax(min-content, 231px) minmax(min-content, 166px)
+    .footer__title
+        margin: 0
+    .footer__list
+        gap: 28px
+    .footer__column
+        flex-direction: column
+        row-gap: 33px
+    .footer__list-item
+        margin: 0 0 7px 0
+
+@media screen and (max-width: $breakpoint_medium)
+    .footer__column
+        flex-direction: column
+
+    .footer__list.footer__list-contact .footer__title
+        width: 100%
+        max-width: 166px
+
+    .footer__nav
+        grid-template-columns: auto auto auto
+        width: 100%
+
+    .footer__content
+        column-gap: 30px
+
+    .footer__contact
+        width: 100%
+        max-width: 212px
+        min-width: 212px
+
+        .logo
+            width: 100%
+            max-width: 212px
+            min-width: 212px
+
+    .footer__list_about
+        margin-right: 0
+        width: 100%
+        max-width: 194px
+
+    .footer__list
+        width: 100%
+        max-width: 214px
+
+    .footer__column .footer__list_media
+        margin-bottom: 32px
+        display: flex
+
+    .footer__content
+        padding: 0 20px
+
+@media screen and (max-width: $breakpoint_small)
+    .footer__content
+        flex-direction: column
+
+    .footer__contact
+        margin: 0 auto 72px
+
+    .footer__nav
+        grid-template-columns: 1fr 1fr 1fr
+
+        ul
+            margin-bottom: 28px
+            &:last-child
+                margin-bottom: 0
+
+@media screen and (max-width: $breakpoint_mobile)
+    .footer__nav
+        grid-template-columns: auto
+        width: fit-content
+        max-width: 212px
+        margin: 0 auto
+
+        ul
+            margin-bottom: 28px
+            text-align: center
+            &:last-child
+                margin-bottom: 0
+
+    .footer__social-container
+        justify-content: center
+
+    .footer__call
+        margin: 0 auto
+
+    .footer__email
+        margin: 0 auto
+
+    .footer__title
+        margin: 0 auto 8px

@@ -1,0 +1,382 @@
+@@include('inc/header.html')
+<section class="circle">
+    <aside class="circle__item circle__item_catalog-top"></aside>
+    <aside class="circle__item circle__item_catalog-bottom"></aside>
+
+</section>
+<main class="page__content">
+    <section class="catalog">
+        <h2 class="catalog__title">
+            Каталог
+            <span class="catalog__title-span">продукции</span>
+        </h2>
+        <div class="catalog__cards">
+            <a class="catalog__link" href="product.html">
+                <article class="catalog__card">
+                    <figure class="catalog__card-content">
+                        <div class="catalog__image-wrapper">
+                            <img class="catalog__image" src="./img/hot-box.png" />
+                        </div>
+                        <figcaption class="cataloge__text">
+                            Контейнеры для горячего
+                        </figcaption>
+                    </figure>
+                </article>
+            </a>
+            <a class="catalog__link" href="product.html">
+                <article class="catalog__card">
+                    <figure class="catalog__card-content">
+                        <div class="catalog__image-wrapper">
+                            <img class="catalog__image" src="./img/hot-box.png" />
+                        </div>
+                        <figcaption class="cataloge__text">
+                            Контейнеры для горячего
+                        </figcaption>
+                    </figure>
+                </article>
+            </a>
+            <a class="catalog__link" href="product.html">
+                <article class="catalog__card">
+                    <figure class="catalog__card-content">
+                        <div class="catalog__image-wrapper">
+                            <img class="catalog__image" src="./img/cold-box.png" />
+                        </div>
+                        <figcaption class="cataloge__text">
+                            Контейнеры для холодного
+                        </figcaption>
+                    </figure>
+                </article>
+            </a>
+            <a class="catalog__link" href="product.html">
+                <article class="catalog__card">
+                    <figure class="catalog__card-content">
+                        <div class="catalog__image-wrapper">
+                            <img class="catalog__image" src="./img/glass.png" />
+                        </div>
+                        <figcaption class="cataloge__text">Стаканы</figcaption>
+                    </figure>
+                </article>
+            </a>
+
+            <a class="catalog__link" href="product.html">
+                <article class="catalog__card">
+                    <figure class="catalog__card-content">
+                        <div class="catalog__image-wrapper">
+                            <img class="catalog__image" src="./img/dish.png" />
+                        </div>
+                        <figcaption class="cataloge__text">Тарелки</figcaption>
+                    </figure>
+                </article>
+            </a>
+
+            <a class="catalog__link" href="product.html">
+                <article class="catalog__card">
+                    <figure class="catalog__card-content">
+                        <div class="catalog__image-wrapper">
+                            <img class="catalog__image" src="./img/seal-box.png" />
+                        </div>
+                        <figcaption class="cataloge__text">Лотки под запайку</figcaption>
+                    </figure>
+                </article>
+            </a>
+
+            <a class="catalog__link" href="product.html">
+                <article class="catalog__card">
+                    <figure class="catalog__card-content">
+                        <div class="catalog__image-wrapper">
+                            <img class="catalog__image" src="./img/special-box.png" />
+                        </div>
+                        <figcaption class="cataloge__text">
+                            Изготовление индивидуальной упаковки
+                        </figcaption>
+                    </figure>
+                </article>
+            </a>
+
+            <a class="catalog__link" href="product.html">
+                <article class="catalog__card">
+                    <figure class="catalog__card-content">
+                        <div class="catalog__image-wrapper">
+                            <img class="catalog__image catalog__image-decor" src="./img/decor-box.png" />
+                        </div>
+                        <figcaption class="cataloge__text">Упаковка с декором</figcaption>
+                    </figure>
+                </article>
+            </a>
+
+        </div>
+    </section>
+    <section class="products">
+        <div class="products__container">
+            <form class="filter">
+                <div class="filter__buttons">
+                    <h3 class="filter__title">Фильтр</h3>
+                    <button type="reset" class="filter__close-btn">Сбросить</button>
+                </div>
+                <fieldset class="filter__inputs">
+                    <label class="filter__label" for="category">Категория</label>
+                    <select class="filter__input" id="category" name="category">
+                        <option class="filter__option filter__option_placeholder" disabled selected="selected">
+                            Выбрать
+                        </option>
+                        <option class="filter__option" value="Контейнеры для холодного">
+                            Контейнеры для холодного
+                        </option>
+                        <option class="filter__option" value="Стаканы">Стаканы</option>
+                        <option class="filter__option" value="Тарелки">Тарелки</option>
+                        <option class="filter__option" value="Лотки под запайку">
+                            Лотки под запайку
+                        </option>
+                        <option class="filter__option" value="Контейнеры для горячего">
+                            Контейнеры для горячего
+                        </option>
+                        <option class="filter__option" value="Лента для термоформования">
+                            Лента для термоформования
+                        </option>
+                        <option class="filter__option" value="Упаковка с декором">
+                            Упаковка с декором
+                        </option>
+                        <option class="filter__option" value="Доставка">
+                            Доставка
+                        </option>
+                    </select>
+
+                    <label class="filter__label" for="product">Тип продукта</label>
+                    <select class="filter__input" id="product" name="product">
+                        <option class="filter__option filter__option_placeholder" disabled selected="selected">
+                            Выбрать
+                        </option>
+                        <option class="filter__option" value="Молочный">
+                            Молочный
+                        </option>
+                        <option class="filter__option" value="Мясной">Мясной</option>
+                        <option class="filter__option" value="Кондитерский">
+                            Кондитерский
+                        </option>
+                        <option class="filter__option" value="Рыбный">Рыбный</option>
+                        <option class="filter__option" value="Полуфабрикаты">
+                            Полуфабрикаты
+                        </option>
+                        <option class="filter__option" value="Готовые блюда">
+                            Готовые блюда
+                        </option>
+                        <option class="filter__option" value="Фрукты, овощи, ягоды">
+                            Фрукты, овощи, ягоды
+                        </option>
+                        <option class="filter__option" value="Зелень, грибы">
+                            Зелень, грибы
+                        </option>
+                        <option class="filter__option" value="Снеки, напитки">
+                            Снеки, напитки
+                        </option>
+                    </select>
+
+                    <label class="filter__label" for="material">Материал</label>
+                    <select class="filter__input" id="material" name="material">
+                        <option class="filter__option filter__option_placeholder" disabled selected="selected">
+                            Выбрать
+                        </option>
+                        <option class="filter__option" value="PP">PP</option>
+                        <option class="filter__option" value="PET">PET</option>
+                        <option class="filter__option" value="PS">PS</option>
+                    </select>
+
+                    <label class="filter__label" for="form">Форма</label>
+                    <select class="filter__input" id="form" name="form">
+                        <option class="filter__option filter__option_placeholder" disabled selected="selected">
+                            Выбрать
+                        </option>
+                        <option class="filter__option" value="Круглая">Круглая</option>
+                        <option class="filter__option" value="Прямоугольная">
+                            Прямоугольная
+                        </option>
+                        <option class="filter__option" value="Квадратная">
+                            Квадратная
+                        </option>
+                        <option class="filter__option" value="Овальная">
+                            Овальная
+                        </option>
+                    </select>
+
+                    <label class="filter__label" for="diameter">Диаметр</label>
+                    <select class="filter__input" id="diameter" name="diameter">
+                        <option class="filter__option filter__option_placeholder" disabled selected="selected">
+                            Выбрать
+                        </option>
+                        <option class="filter__option" value="76 мм">76 мм</option>
+                        <option class="filter__option" value="89 мм">89 мм</option>
+                        <option class="filter__option" value="95 мм">95 мм</option>
+                        <option class="filter__option" value="115 мм">115 мм</option>
+                        <option class="filter__option" value="127 мм">127 мм</option>
+                        <option class="filter__option" value="131 мм">131 мм</option>
+                        <option class="filter__option" value="144 мм">144 мм</option>
+                        <option class="filter__option" value="150 мм">150 мм</option>
+                        <option class="filter__option" value="190 мм">190 мм</option>
+                    </select>
+
+                    <label class="filter__label" for="capacity">Вместимость</label>
+                    <select class="filter__input" id="capacity" name="capacity">
+                        <option class="filter__option filter__option_placeholder" disabled selected="selected">
+                            Выбрать
+                        </option>
+                        <option class="filter__option" value="120 мл-200 мл">
+                            120 мл-200 мл
+                        </option>
+                        <option class="filter__option" value="250 мл-500 мл">
+                            250 мл-500 мл
+                        </option>
+                        <option class="filter__option" value="600 мл-1000 мл">
+                            600 мл-1000 мл
+                        </option>
+                        <option class="filter__option" value="1100 мл-1500 мл">
+                            1100 мл-1500 мл
+                        </option>
+                        <option class="filter__option" value="1500 мл-6000 мл">
+                            1500 мл-6000 мл
+                        </option>
+                    </select>
+
+                    <label class="filter__label" for="decor">Декор</label>
+                    <select class="filter__input" id="decor" name="decor">
+                        <option class="filter__option filter__option_placeholder" disabled selected="selected">
+                            Выбрать
+                        </option>
+                    </select>
+                </fieldset>
+            </form>
+            <div class="products__images">
+                <ul class="gallery gallery__catalog">
+                    <a href="product.html" class="gallery__link">
+                        <li class="gallery__item">
+                            <figure class="gallery__card gallery__card_catalog">
+                                <picture class="gallery__card-container gallery__card-container_catalog">
+                                    <source srcset="./img/k-187.webp" type="image/webp" />
+                                    <img class="gallery__card-image gallery__card-image_catalog" src="./img/k-187.png"
+                                        alt="Контейнер К-187" />
+                                </picture>
+                                <figcaption class="gallery__card-description">
+                                    Универсальная линейка полипропиленовых контейнеров К-187
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </a>
+                    <a href="product.html" class="gallery__link">
+                        <li class="gallery__item">
+                            <figure class="gallery__card gallery__card_catalog">
+                                <picture class="gallery__card-container gallery__card-container_catalog">
+                                    <source srcset="./img/k-189.webp" type="image/webp" />
+                                    <img class="gallery__card-image gallery__card-image_catalog" src="./img/k-189.png"
+                                        alt="Контейнер К-189" />
+                                </picture>
+                                <figcaption class="gallery__card-description">
+                                    Контейнер К-189 для готовых блюд
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </a>
+                    <a href="product.html" class="gallery__link">
+                        <li class="gallery__item">
+                            <figure class="gallery__card gallery__card_catalog">
+                                <picture class="gallery__card-container gallery__card-container_catalog">
+                                    <source srcset="./img/k-127.webp" type="image/webp" />
+                                    <img class="gallery__card-image gallery__card-image_catalog" src="./img/k-127.png"
+                                        alt="Контейнер К-127" />
+                                </picture>
+                                <figcaption class="gallery__card-description">
+                                    Универсальный контейнер К-127
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </a>
+                    <a href="product.html" class="gallery__link">
+                        <li class="gallery__item">
+                            <figure class="gallery__card gallery__card_catalog">
+                                <picture class="gallery__card-container gallery__card-container_catalog">
+                                    <source srcset="./img/k-2016.webp" type="image/webp" />
+                                    <img class="gallery__card-image gallery__card-image_catalog" src="./img/k-2016.png"
+                                        alt="Контейнер К-2016" />
+                                </picture>
+                                <figcaption class="gallery__card-description">
+                                    Ланч-бокс К-2016 (LK) из полипропилена
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </a>
+                    <a href="product.html" class="gallery__link">
+                        <li class="gallery__item">
+                            <figure class="gallery__card gallery__card_catalog">
+                                <picture class="gallery__card-container gallery__card-container_catalog">
+                                    <source srcset="./img/k-190.webp" type="image/webp" />
+                                    <img class="gallery__card-image gallery__card-image_catalog" src="./img/k-190.png"
+                                        alt="Контейнер К-190" />
+                                </picture>
+                                <figcaption class="gallery__card-description">
+                                    Ланч-бокс К-190 из полипропилена
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </a>
+                    <a href="product.html" class="gallery__link">
+                        <li class="gallery__item">
+                            <figure class="gallery__card gallery__card_catalog">
+                                <picture class="gallery__card-container gallery__card-container_catalog">
+                                    <source srcset="./img/k-1616.webp" type="image/webp" />
+                                    <img class="gallery__card-image gallery__card-image_catalog" src="./img/k-1616.png"
+                                        alt="Контейнер К-1616" />
+                                </picture>
+                                <figcaption class="gallery__card-description">
+                                    Герметичный контейнер К-1616 из полипропилена
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </a>
+                    <a href="product.html" class="gallery__link">
+                        <li class="gallery__item">
+                            <figure class="gallery__card gallery__card_catalog">
+                                <picture class="gallery__card-container gallery__card-container_catalog">
+                                    <source srcset="./img/k-1212.webp" type="image/webp" />
+                                    <img class="gallery__card-image gallery__card-image_catalog" src="./img/k-1212.png"
+                                        alt="Контейнер К-1212" />
+                                </picture>
+                                <figcaption class="gallery__card-description">
+                                    Герметичный контейнер из ПП К-1212
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </a>
+                    <a href="product.html" class="gallery__link">
+                        <li class="gallery__item">
+                            <figure class="gallery__card gallery__card_catalog">
+                                <picture class="gallery__card-container gallery__card-container_catalog">
+                                    <source srcset="./img/k-230.webp" type="image/webp" />
+                                    <img class="gallery__card-image gallery__card-image_catalog" src="./img/k-230.png"
+                                        alt="Контейнер К-230" />
+                                </picture>
+                                <figcaption class="gallery__card-description">
+                                    Ланч-бокс для горячего К-230
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </a>
+
+                    <a href="product.html" class="gallery__link">
+                        <li class="gallery__item">
+                            <figure class="gallery__card gallery__card_catalog">
+                                <picture class="gallery__card-container gallery__card-container_catalog">
+                                    <source srcset="./img/k-144.webp" type="image/webp" />
+                                    <img class="gallery__card-image gallery__card-image_catalog" src="./img/k-144.png"
+                                        alt="Контейнер К-144" />
+                                </picture>
+                                <figcaption class="gallery__card-description">
+                                    Герметичные контейнеры К-144
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </a>
+                </ul>
+                <!-- <a href="catalog.html" class="products__link">Показать ещё</a> -->
+            </div>
+        </div>
+    </section>
+</main>
+@@include('inc/footer.html')

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>ПолиЭр</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./img/favicon.ico" type="image/svg+xml">
+  <!-- Подключаем стили проекта -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="header__container">
+      <div id="nav-icon1" class="burger-menu">
+        <span></span>
+      </div>
+      <a href="index.html" class="header__logo-link">
+        <div class="header__logo">
+        </div>
+      </a>
+      <nav class="header__links">
+        <ul class="header__link-container">
+          <li class="header__list-item header__list-item_type_menu">
+            <a href="catalog.html" class="header__link"> Наши&nbsp;продукты </a>
+            <div class="header__link-arrow"></div>
+            <ul class="header__products">
+              <li class="header__product">
+                <a href="catalog.html" class="header__product-link">Контейнеры для горячего</a>
+              </li>
+              <li class="header__product">
+                <a href="catalog.html" class="header__product-link">Контейнеры для холодного</a>
+              </li>
+              <li class="header__product">
+                <a href="catalog.html" class="header__product-link">Стаканы</a>
+              </li>
+              <li class="header__product">
+                <a href="catalog.html" class="header__product-link">Тарелки</a>
+              </li>
+              <li class="header__product">
+                <a href="catalog.html" class="header__product-link">Ленты для термоформования</a>
+              </li>
+              <li class="header__product">
+                <a href="catalog.html" class="header__product-link">Упаковка с декором</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__list-item header__list-item_type_menu">
+            <a href="about.html" class="header__link"> О&nbsp;компании </a>
+            <div class="header__link-arrow"></div>
+            <ul class="header__products">
+              <li class="header__product">
+                <a href="about.html" class="header__product-link">История ПолиЭр</a>
+              </li>
+              <li class="header__product">
+                <a href="about.html" class="header__product-link">Сертификаты стандарты безопасности и качества</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__list-item header__list-item_type_redirect">
+            <a href="news.html" class="header__link">Медиацентр</a>
+          </li>
+          <li class="header__list-item header__list-item_type_redirect">
+            <a href="contact-us.html" class="header__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <form class="header__form">
+        <input class="header__search" type="search" placeholder="Поиск" />
+      </form>
+
+      <a class="header__call-link" href="tel:74996426082">
+        <i class="header__call-icon"></i>
+        +7 (499) 642-60-82
+      </a>
+      <ul class="header__social">
+        <li class="header__icon header__icon_type_telegram">
+          <a href="https://t.me/polyerru/" class=" "></a>
+        </li>
+        <li class="header__icon header__icon_type_whatsapp">
+          <a href="#" class="header__icon"></a>
+        </li>
+        <a href="ordering.html" class="header__icon header__link_op">
+          <li class="header__icon header__icon_type_op">
+          </li>
+        </a>
+      </ul>
+    </div>
+  </header>
+  <!-- <section class="circle">
+    <aside class="circle__item circle__item_top-left"></aside>
+    <aside class="circle__item circle__item_top-rigth"></aside>
+    <aside class="circle__item circle__item_center-rigth"></aside>
+    <aside class="circle__item circle__item_center-left"></aside>
+    <aside class="circle__item circle__item_center-bottom-rigth"></aside>
+    <aside class="circle__item circle__item_bottom-rigth"></aside>
+  </section> -->
+
+  <section class="menu">
+    <div class="menu__container">
+      <nav class="menu__navigation">
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a href="catalog.html" class="menu__link"> Наши продукты <i class=" menu__link_type_arrow"></i></a>
+            <ul class="menu__sub-list">
+              <li class="menu__sub-list-item">
+                <a href="catalog.html" class="menu__sub-list-item-link">Контейнеры для горячего</a>
+              </li>
+              <li class="menu__sub-list-item">
+                <a href="catalog.html" class="menu__sub-list-item-link">Контейнеры для холодного</a>
+              </li>
+              <li class="menu__sub-list-item">
+                <a href="catalog.html" class="menu__sub-list-item-link">Стаканы</a>
+              </li>
+              <li class="menu__sub-list-item">
+                <a href="catalog.html" class="menu__sub-list-item-link">Тарелки</a>
+              </li>
+              <li class="menu__sub-list-item">
+                <a href="catalog.html" class="menu__sub-list-item-link">Ленты для термоформования</a>
+              </li>
+              <li class="menu__sub-list-item">
+                <a href="catalog.html" class="menu__sub-list-item-link">Упаковка с декором</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__list-item">
+            <a href="about.html" class="menu__link"> О компании<i class="menu__link_type_arrow"></i> </a>
+            <ul class="menu__sub-list-item">
+              <li class="menu__sub-list-item">
+                <a href="about.html" class="menu__sub-list-item-link">История ПолиЭр</a>
+              </li>
+              <li class="menu__sub-list-item">
+                <a href="about.html" class="menu__sub-list-item-link">Сертификаты стандарты безопасности и качества</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__list-item">
+            <a href="news.html" class="menu__link">Медиацентр</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="contact-us.html" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="middle">
+        <div class="menu1">
+
+            <li class="item item-checkbox" id="our-products">
+                <a href="" class="main-links">Наши продукты</a>
+                <input type="checkbox" name="" id="" class="acc-control">
+                <a href="#our-products" class="btn input"></a>
+                <div class="smenu">
+                    <a href="">Контейнеры для горячего</a>
+                    <a href="">Контейнеры для холодного</a>
+                    <a href="">Стаканы</a>
+                    <a href="">Тарелки</a>
+                    <a href="">Ленты для термоформования</a>
+                    <a href="">Упаковка с декором</a>
+                </div>
+            </li>
+
+            <li class="item item-checkbox" id="about">
+                <a href="" class="main-links">О компании</a>
+                <input type="checkbox" name="" id="" class="acc-control">
+                <a href="#about" class="btn input"></a>
+                <div class="smenu">
+                    <a href="">История ПолиЭр</a>
+                    <a href="">Сертификаты стандарты безопасности и качества</a>
+                </div>
+            </li>
+
+            <li class="item">
+              <a href="" class="btn">Медиацентр</a>
+            </li>
+
+            <li class="item">
+                <a href="" class="btn">Контакты</a>
+            </li>
+
+
+
+
+        </div>
+    </div>
+      <div class="menu__elements">
+        <form class="menu__form">
+          <input class="menu__search" type="search" placeholder="Поиск" />
+        </form>
+
+        <a class="menu__call-link" href="tel:74996426082">
+          <i class="menu__call-icon"></i>
+          +7 (499) 642-60-82
+        </a>
+      </div>
+
+      <ul class="menu__social">
+        <li class="menu__icon menu__icon_type_telegram">
+          <a href="https://t.me/polyerru/" class=" "></a>
+        </li>
+        <li class="menu__icon menu__icon_type_whatsapp">
+          <a href="#" class="menu__icon"></a>
+        </li>
+      </ul>
+    </div>
+  </section>

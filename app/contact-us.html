@@ -1,0 +1,96 @@
+@@include('inc/header.html')
+<main class="page__content">
+    <div class="contacts">
+        <nav class="navigation navigation-contacts">
+            <ul class="navigation__list">
+                <li class="navigation__list-item">
+                    <a href="index.html" class="navigation__link navigation__link_redirect">Главная</a>
+                    <div class="navigation__arrow"></div>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="contact-us.html" class="navigation__link navigation__link_active">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="contacts__container">
+            <article class="contacts__data">
+                <h2 class="contacts__title">Контактная информация</h2>
+                <dl class="contacts__as-list">
+                    <dt class="contacts__as-list-item">
+                        <div class="contacts__icon contacts__location-icon"></div>
+                        <p class="contacts__subtitle">Наш адрес</p>
+                    </dt>
+                    <dd class="contacts__description">
+                        <a href="https://yandex.ru/maps/213/moscow/house/1_y_varshavskiy_proyezd_2s12/Z04YcAVlSEcAQFtvfXp1d31rbA==/?ll=37.625127%2C55.646188&z=16.75"
+                            class="contacts__paragraph">
+                            <p class="contacts__text">115201, г. Москва, 1-й Варшавский проезд, д. 2 строение 12</p>
+                            <p class="contacts__text">Территория "МОСРЫБОКОМБИНАТ</p>
+                        </a>
+
+                    </dd>
+                    <dt class="contacts__as-list-item">
+                        <div class="contacts__icon contacts__call-icon"></div>
+                        <p class="contacts__subtitle">Телефон (многоканальный)/Факс:</p>
+                        <a href="https://yandex.ru/maps/213/moscow/house/1_y_varshavskiy_proyezd_2s12/Z04YcAVlSEcAQFtvfXp1d31rbA==/?ll=37.625127%2C55.646188&z=16.75"
+                            name="map"></a>
+                    </dt>
+                    <dd class="contacts__description">
+                        <a href="tel:74996426082" class="contacts__paragraph">+7 (499) 642-60-82</a>
+                    </dd>
+                    <dt class="contacts__as-list-item">
+                        <div class="contacts__icon contacts__email-icon"></div>
+                        <p class="contacts__subtitle">Электронная почта:</p>
+                    </dt>
+                    <dd class="contacts__description">
+                        <a class="contacts__paragraph" href="mailto:info@up-t.ru">info@up-t.ru</a>
+                    </dd>
+                </dl>
+                <div class="contacts__wrapper">
+                    <div class="contacts__map">
+                        <script type="text/javascript" charset="utf-8" async
+                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0a1050aa38733bb38118011400157b237a554898624c24814c9b78bfdcb7b6ca&amp;lang=ru_RU&amp;scroll=true">
+                        </script>
+                    </div>
+                    <a name="map"></a>
+                    <div class="contacts__substrate">
+                    </div>
+
+
+                </div>
+            </article>
+            <hr class="vertival-hr">
+            <article class="contacts__data">
+                <h2 class="contacts__title contacts__title_form">Обратная связь</h2>
+                <form class="contacts__form">
+                    <ul class="contacts__form-list">
+                        <li class="contacts__form-list-item">
+                            <label for="name" class="contacts__label">Ваше имя </label>
+                            <input id="name" name="name" class="contacts__input" placeholder="Введите ФИО" />
+                        </li>
+                        <li class="contacts__form-list-item">
+                            <label for="email" class="contacts__label">Ваш email </label>
+                            <input class="contacts__input" placeholder="Введите почту" id="email" name="email" />
+                        </li>
+                        <li class="contacts__form-list-item">
+                            <label for="message" class="contacts__label">Сообщение
+                            </label>
+
+                            <textarea name="message" id="message" class="contacts__textarea"
+                                placeholder="Введите текст"></textarea>
+                        </li>
+                        <li class="contacts__form-list-item contacts__form-list-item_type_checkbox">
+                            <input class="checkbox_type_terms contacts__checkbox" type="checkbox" id="terms"
+                                name="terms" />
+                            <label for="terms"
+                                class="contacts__label checkbox-label_type_terms contacts__checkbox-label">Даю согласие
+                                на обработку персональных данных</label>
+                        </li>
+                    </ul>
+                    <button type="submit" class="contacts__submit">Отправить</button>
+                </form>
+            </article>
+        </section>
+    </div>
+</main>
+
+@@include('inc/footer.html')

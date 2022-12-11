@@ -1,0 +1,186 @@
+.header
+    background: white
+    width: 100%
+    margin: 0 auto
+.header_moving
+    background: white
+.header__container
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    max-width: 1620px
+    height: 160px
+    margin: auto
+.header__logo
+    width: 213px
+    height: 74px
+    background: center center no-repeat url('../img/logo.svg')
+    margin-right: 32px
+.header__link-container
+    list-style: none
+    display: flex
+    align-items: center
+    padding: 0
+    margin: 0
+.header__link
+    line-height: 24px
+    text-decoration: none
+    transition: 0.5s
+    cursor: pointer
+    color: $black
+    @include regularText
+.header__list-item
+    height: 47px
+    display: flex
+    align-items: center
+    gap: 10px
+.header__list-item_type_redirect
+    border-bottom: 1px solid transparent
+    margin-left: 25px
+    height: 40px
+    padding-top: 2px
+    box-sizing: content-box
+    &:hover
+        border-bottom: 1px solid black
+        box-sizing: content-box
+.header__list-item_type_redirect_active
+    border-bottom: 1px solid black
+.header__link-arrow
+    width: 24px
+    height: 100%
+    background-image: url(../img/arrow-down.svg)
+    background-position: center
+    background-repeat: no-repeat
+.header__link_active
+    cursor: default
+.header__products
+    list-style: none
+    padding: 0
+    width: 282px
+    background: $black
+    border-radius: 0px 12px 12px 12px
+    padding: 24px 35px 24px 20px
+    display: flex
+    flex-direction: column
+    gap: 15px
+    position: absolute
+    top: 50px
+    left: 0
+    z-index: 1
+    box-sizing: border-box
+    visibility: hidden
+    opacity: 0
+    transition: 0.5s
+.header__list-item_type_menu
+    position: relative
+    padding-left: 20px
+    padding-right: 10px
+    margin-left: 6px
+    &:hover
+        color: $white
+        background: $black
+        border-radius: 12px 12px 12px 0
+        .header__link
+            color: $white
+        .header__products
+            visibility: visible
+            opacity: 1
+.header__product-link
+    text-decoration: none
+    transition: 0.5s
+    cursor: pointer
+    line-height: 24px
+    color: $white
+    @include regularRale
+    &:hover
+        text-decoration: underline
+.header__social
+    display: flex
+    gap: 32px
+    padding: 0
+    margin: 0
+    margin-left: 30px
+.header__icon
+    background-color: transparent
+    background-repeat: no-repeat
+    background-position: center
+    width: 24px
+    height: 24px
+    list-style: none
+    transition: 0.5s
+    cursor: pointer
+    &:hover
+        @include hover
+.header__icon_type_telegram
+    background-image: url(../img/telegram.svg)
+.header__icon_type_whatsapp
+    background-image: url(../img/whatsapp.svg)
+.header__icon_type_op
+    width: 26px
+    position: relative
+    background-image: url(../img/op.svg)
+    background-size: cover
+    &::after
+        position: absolute
+        content: "23"
+        height: 25px
+        width: 25px
+        border-radius: 50%
+        background-color: $green
+        color: $white
+        font-size: 15px
+        line-height: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        top: -13px
+        left: 13px
+        @include semiBoldManrope
+.header__form
+    margin: 0 20px 0 78px
+.header__search
+    margin: 0
+    width: 296px
+    height: 60px
+    border: 3px solid transparent
+    background: #eeeeee
+    border-radius: 76px
+    line-height: 50px
+    padding: 0 15px 0 57px
+    text-align: left
+    background-image: url(../img/search.svg)
+    background-repeat: no-repeat
+    background-position: bottom 15px left 22px
+    color: $black
+    @include regularText
+    &:focus-visible
+        border: 3px solid $green
+        outline: none
+        border-radius: 76px
+.header__call-link
+    transition: 0.5s
+    text-decoration: none
+    cursor: pointer
+    width: 257px
+    height: 60px
+    background: $green
+    border-radius: 107px
+    border: none
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $white
+    font-size: 16px
+    line-height: 24px
+    box-sizing: border-box
+    @include semiBoldManrope
+    &:hover
+        @include hover
+.header__call-icon
+    height: 23px
+    width: 21px
+    background: center center no-repeat url(../img/tel.svg)
+    margin-right: 13px
+.header__button
+    &:hover
+        @include hover
