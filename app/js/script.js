@@ -226,24 +226,84 @@ setBurgerEventListener();
 
 // Клик по цвету
 
-const productList = document.querySelectorAll('.container-card__list');
+const productList = document.querySelectorAll(".container-card__list");
 const blackPrice = "5000"
 const transparentPrice = "8000"
 const priceContainer = (el) => {
-  return el.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('.container-card__price')
+  return el.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector(".container-card__price")
 }
 productList.forEach((item) => {
   item.addEventListener("click", (evt) => {
-    if (evt.target.classList.contains('container-card_color_black')) {
-
+    if (evt.target.classList.contains("container-card_color_black")) {
       priceContainer(evt.target).textContent = blackPrice;
+      evt.target.classList.add("container-card_color_checked")
+      evt.target.nextElementSibling.classList.remove("container-card_color_checked")
 
-    } else if (evt.target.classList.contains('container-card_color_transparent')) {
+    } else if (evt.target.classList.contains("container-card_color_transparent")) {
       priceContainer(evt.target).textContent = transparentPrice;
+      evt.target.classList.add("container-card_color_checked")
+      evt.target.previousElementSibling.classList.remove("container-card_color_checked")
     }
     return;
   })
 })
+
+let minus = document.querySelectorAll(".counter__value-button_type_decrease");
+let plus = document.querySelectorAll(".counter__value-button_type_increase");
+let currentValue = document.querySelector(".ordering__result");
+
+function productMinus() {
+  if (this.nextElementSibling.innerHTML > 0) {
+    let count = this.nextElementSibling
+    count.innerHTML -= 1
+    let totalPrice = this.parentNode.parentNode.nextElementSibling.firstElementChild 
+    totalPrice.innerHTML = `${count.innerHTML * 200} ₽`
+    formTotalPrice()
+  } 
+}
+
+function productPlus() {
+  let count = this.previousElementSibling
+  count.innerHTML = Number(this.previousElementSibling.innerHTML) + 1
+  let totalPrice = this.parentNode.parentNode.nextElementSibling.firstElementChild 
+  totalPrice.innerHTML = `${count.innerHTML * 300} ₽`
+  formTotalPrice()
+}
+
+function formTotalPrice() {
+  let totalPrice = document.querySelector('.ordering__sum')
+  let productWrapper = document.querySelectorAll('.ordering__list-item')
+  let counter = 0
+  productWrapper.forEach(el => {
+    if(el.childNodes[1].childNodes[1].checked) {
+      counter += Number(el.childNodes[5].childNodes[3].childNodes[1].innerHTML.split(' ')[0])
+    }
+  })
+  totalPrice.innerHTML = counter
+}
+
+minus.forEach(el => el.addEventListener('click', productMinus))
+plus.forEach(el => el.addEventListener('click', productPlus))
+
+document.querySelector(".ordering__submit").addEventListener('click', (event) => {
+  event.preventDefault();
+  document.querySelector(".ordering__fieldset-contacts").classList.add("active")
+  document.querySelector(".ordering__fieldset-cart").classList.add("hidden")
+})
+
+formTotalPrice();
+document.querySelectorAll('.ordering__checkbox_alone').forEach(el => el.addEventListener('click', formTotalPrice));
+
+const checkBoxArray = document.querySelectorAll(".ordering__checkbox_alone")
+const checkAllButton = document.querySelector(".ordering__checkbox_label")
+
+const checkAll = () => {
+  checkBoxArray.forEach((item) => {
+
+    item.checked = true
+  })
+}
+checkAllButton.addEventListener("click", checkAll)
 
 // тест
 

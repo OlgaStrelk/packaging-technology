@@ -62,6 +62,8 @@ $white: #fff
     font-style: normal
     font-weight: 700
 
+.flex
+    display: flex
 .page
     background: white
     margin: 0
@@ -225,8 +227,9 @@ $white: #fff
 
 .circle
     position: absolute
+    top: 0
     width: 100%
-    height: 90%
+    height: 100%
     overflow: hidden
     pointer-events: none
 
@@ -248,29 +251,36 @@ $white: #fff
     top: 166px
     right: -190px
 .circle__item_center-rigth
+    right: 0
     width: 561px
     height: 591px
-    top: 1360px
-    right: -167px
+    top: 1521px
+.circle__item_center-left
     width: 561px
     height: 591px
-    top: 2308px
-    left: -183px
+    top: 2400px
+    left: 0
 .circle__item_center-bottom-rigth
     width: 604px
     height: 604px
-    top: 2776px
+    top: 2860px
     right: -128px
 .circle__item_bottom-rigth
     width: 561px
     height: 591px
     top: 4383px
     right: -181px
+.circle__item_bottom-left
+    width: 604px
+    height: 604px
+    bottom: 1000px
+    left: 0
 .page__content
     box-sizing: border-box
     max-width: 1620px
     width: 100%
     margin: auto
+    // padding: 0 20px
 .circle__item_catalog-top
     width: 591px
     height: 591px
@@ -1028,10 +1038,28 @@ $white: #fff
     color: #000000
     margin: 0
     @include semiBoldManrope
-
+.ordering
+    padding-top: 30px
+    padding-bottom: 60px
+    &__list
+        .wrapper
+            display: flex
+            align-items: flex-start
+    .flex
+        margin-right: 80px
+    .column
+        min-height: 200px
+.footer__ordering
+    .footer
+        &__contact
+            flex-direction: row
+            justify-content: space-between
+            width: 100%
+            align-items: center
+    .footer-ordering
+        margin-bottom: 25px
 .ordering__title
-    max-width: 343px
-    margin: 0
+    margin-bottom: 30px
     font-size: 38px
     line-height: 52px
     color: $black
@@ -1068,19 +1096,27 @@ $white: #fff
 .ordering__form
     display: flex
     justify-content: space-between
-
+    align-items: center
 .ordering__fieldset
     border: none
     display: flex
     flex-direction: column
     padding: 0
+    margin: 0
+    &:not(:last-child)
+        margin-right: 80px
 .ordering__fieldset-contacts
+    display: none
     gap: 10px
     max-width: 803px
     width: 100%
+    &.active
+        display: block
 .ordering__fieldset-cart
     max-width: 1075px
     width: 100%
+.ordering__fieldset-cart.hidden
+    display: none
 .ordering__fieldset-detail
     width: 463px
     background: $gray
@@ -1133,7 +1169,7 @@ $white: #fff
     margin-bottom: 40px
 
 .ordering__text
-    margin: 0
+    margin-bottom: 30px
     line-height: 24px
     color: $black
     @include regularText
@@ -1168,10 +1204,11 @@ $white: #fff
 .ordering__header
     display: flex
     justify-content: space-between
+    margin-bottom: 40px
 .ordering__list
     list-style: none
     padding: 0
-    margin-bottom: 110px
+    margin: 0
 .ordering__list-item
     border-top: 1px solid $gray
     padding-top: 20px
@@ -1236,6 +1273,7 @@ $white: #fff
         transform: scale(1.1)
 .ordering__title_cart
     font-family: $font-family
+    margin: 0
     font-size: 24px
     font-weight: 400
     line-height: 36px
@@ -1294,7 +1332,6 @@ $white: #fff
     min-width: 186px
     color: $black
     background-image: url(../img//black_remove.svg)
-
 .catalog
     margin: auto
     max-width: 1620px
@@ -1720,9 +1757,6 @@ $white: #fff
     @include semiBoldRale
     &:hover
         @include hover
-
-.empty
-    min-height: 33vh
 .slider
     display: flex
     flex-direction: column
@@ -1936,9 +1970,13 @@ $white: #fff
     display: flex
 .container-card_color
     margin: 0
+    border-radius: 10px
+    padding: 3px
     &:hover
         text-decoration: underline
         cursor: pointer
+.container-card_color_checked
+    outline: 2px solid $green
 .container-card__value
     margin: 0
     margin-bottom: 25px
@@ -1955,7 +1993,7 @@ $white: #fff
     line-height: 36px
     @include boldManrope
     font-weight: 300 !important
-        
+
 .container-card__form
     gap: 19px
     width: 100%
@@ -3058,10 +3096,9 @@ input#number
 .vertival-hr
     display: none
 
-input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button 
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
     -webkit-appearance: none
 
-input[type='number'], input[type="number"]:hover, input[type="number"]:focus 
+input[type='number'], input[type="number"]:hover, input[type="number"]:focus
     appearance: none
     -moz-appearance: textfield
-

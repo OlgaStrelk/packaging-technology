@@ -12,18 +12,22 @@
             </li>
         </ul>
     </nav>
-    <section class="ordering empty">
-        <!-- <h2 class="ordering__title">Ваша заявка пуста</h2>
-        <p class="ordering__text">Перейдите в раздел Наши продукты для выбора товара. После добавления товара вы сможете
-          завершить оформление заявки.</p>
-        <a href="catalog.html" class="ordering__link">Выбрать товар</a> -->
+    <section class="ordering">
+        <!-- <div class="ordering__empty-basket">
+            <h2 class="ordering__title">Ваша заявка пуста</h2>
+            <p class="ordering__text">Перейдите в раздел Наши продукты для выбора товара. После добавления товара вы сможете
+              завершить оформление заявки.</p>
+            <a href="catalog.html" class="ordering__link">Выбрать товар</a>    
+        </div> -->
 
         <form class="ordering__form">
             <fieldset class="ordering__fieldset ordering__fieldset-cart">
                 <div class="ordering__header">
-                    <input id="select-all" name="select-all" type="checkbox" class="ordering__checkbox" /><label
-                        for="select-all" class="ordering__label ordering__checkbox_label">Выбрать все</label><button
-                        type="reset" class="ordering__delete-btn ordering__delete-btn__type_all">
+                    <input id="select-all" name="select-all" type="checkbox" class="ordering__checkbox" />
+                    <label for="select-all" class="ordering__label ordering__checkbox_label">
+                        Выбрать все
+                    </label>
+                    <button type="reset" class="ordering__delete-btn ordering__delete-btn__type_all">
                         Удалить выбранные
                     </button>
                 </div>
@@ -34,33 +38,32 @@
                                 type="checkbox" />
                             <div class="ordering__selection"></div>
                         </label>
-                        <!-- <div
-                          class="ordering__selection ordering__selection_active"
-                        ></div> -->
                         <a class="ordering__image-link" href="product.html">
                             <div class="ordering__image-box">
                                 <img src="./img/container-card2.jpg" alt="" class="ordering__image" />
                             </div>
                         </a>
-                        <a class="ordering__title-link" href="product.html">
-                            <h3 class="ordering__title_cart">Контейнер К-1212</h3>
-                        </a>
-
-                        <div class="counter ordering__counter">
-                            <div class="counter__value-button counter__value-button_type_decrease ordering__value-button"
-                                id="decrease" value="Decrease Value">
-                                -
+                        <div class="wrapper">
+                            <div class="flex">
+                                <a class="ordering__title-link" href="product.html">
+                                    <h3 class="ordering__title_cart">Контейнер К-1212</h3>
+                                </a>
+                                <div class="counter ordering__counter">
+                                    <div class="counter__value-button counter__value-button_type_decrease ordering__value-button"
+                                        id="decrease" value="Decrease Value">
+                                        -
+                                    </div>
+                                    <span type="number" id="number" class="ordering__result">1</span>
+                                    <div class="counter__value-button counter__value-button_type_increase ordering__value-button"
+                                        id="increase" value="Increase Value">
+                                        +
+                                    </div>
+                                </div>
                             </div>
-                            <span type="number" id="number" class="ordering__result">1</span>
-                            <div class="counter__value-button counter__value-button_type_increase ordering__value-button"
-                                id="increase" value="Increase Value">
-                                +
+                            <div class="column">
+                                <span class="ordering__price">200 ₽</span><button
+                                    class="ordering__delete-btn delete">Удалить</button>
                             </div>
-                        </div>
-
-                        <div class="column">
-                            <span class="ordering__price">4 048 ₽</span><button
-                                class="ordering__delete-btn">Удалить</button>
                         </div>
                     </li>
                     <li class="ordering__list-item">
@@ -74,29 +77,33 @@
                                 <img src="./img/container-card1.jpg" alt="" class="ordering__image" />
                             </div>
                         </a>
-                        <a class="ordering__title-link" href="product.html">
-                            <h3 class="ordering__title_cart">Крышка для контейнера К-1212</h3>
-                        </a>
-                        <div class="counter ordering__counter">
-                            <div class="counter__value-button counter__value-button_type_decrease ordering__value-button"
-                                id="decrease" value="Decrease Value">
-                                -
+                        <div class="wrapper">
+                            <div class="flex">
+                                <a class="ordering__title-link" href="product.html">
+                                    <h3 class="ordering__title_cart">Крышка для контейнера К-1212</h3>
+                                </a>
+                                <div class="counter ordering__counter">
+                                    <div class="counter__value-button counter__value-button_type_decrease ordering__value-button"
+                                        id="decrease" value="Decrease Value">
+                                        -
+                                    </div>
+                                    <span class="ordering__result" type="number" id="number">1</span>
+                                    <div class="counter__value-button counter__value-button_type_increase ordering__value-button"
+                                        id="increase" value="Increase Value">
+                                        +
+                                    </div>
+                                </div>
                             </div>
-                            <span class="ordering__result" type="number" id="number">1</span>
-                            <div class="counter__value-button counter__value-button_type_increase ordering__value-button"
-                                id="increase" value="Increase Value">
-                                +
+                            <div class="column">
+                                <span class="ordering__price">300 ₽</span><button
+                                    class="ordering__delete-btn delete">Удалить</button>
                             </div>
-                        </div>
-                        <div class="column">
-                            <span class="ordering__price">12 000 ₽</span><button
-                                class="ordering__delete-btn">Удалить</button>
                         </div>
                     </li>
                 </ul>
             </fieldset>
 
-            <!-- <fieldset class="ordering__fieldset ordering__fieldset-contacts">
+            <fieldset class="ordering__fieldset ordering__fieldset-contacts">
               <h2 class="ordering__title-fill">Оформление заявки</h2>
               <label class="ordering__label" for="title">Название компании</label>
               <input
@@ -105,6 +112,7 @@
                 type="text"
                 placeholder="Введите название"
                 required
+                name="title"
               />
               <span class="ordering__error">Обязательное поле</span>
               <label class="ordering__label" for="user">Ваше ФИО</label>
@@ -114,6 +122,7 @@
                 type="text"
                 placeholder="Введите ФИО"
                 required
+                name="user"
               />
               <span class="ordering__error">Обязательное поле</span>
   
@@ -126,6 +135,7 @@
                     type="tel"
                     placeholder="+7 (123) 456-78-90"
                     required
+                    name="tel"
                   />
                   <span class="ordering__error">Обязательное поле</span>
                 </label>
@@ -138,50 +148,27 @@
                     type="email"
                     placeholder="Ваш email"
                     required
+                    name="email"
                   />
                   <span class="ordering__error">Обязательное поле</span>
                 </label>
               </div>
-            </fieldset>-->
+            </fieldset>
+
             <fieldset class="ordering__fieldset ordering__fieldset-detail">
                 <h3 class="ordering__fieldset-title">Детали заказa</h3>
                 <div class="ordering__count">
                     <p class="ordering__text">11 товаров</p>
                     <p class="ordering__text ordering__sum">16 048 ₽</p>
                 </div>
-                <button type="submit" class="ordering__submit">Оформить заявку</button>
-                <a href="catalog.html" class="ordering__form-link">Вернуться к выбору товаров</a>
+                <button class="ordering__submit">Продолжить</button>
+                <a href="catalog.html" class="ordering__form-link">Вернуться к товарам</a>
             </fieldset>
         </form>
     </section>
 </main>
+
 @@include('inc/footer.html')
-<div class="footer__container">
-    <div class="footer__contact footer__contact_type_ordering">
-        <a href="index.html">
-            <picture>
-                <source srcset="./img/logo-dark.svg" type="image/webp" />
-                <img src="./img/logo-dark.svg" alt="лого" class="logo logo_dark" />
-            </picture>
-        </a>
-        <div class="footer__social-container">
-            <a href="#" class="footer__social-icon footer__telegram-icon" target="_blank"></a>
-            <a href="#" class="footer__social-icon footer__whatsapp-icon" target="_blank"></a>
-        </div>
-        <div class="footer__contact">
-            <a href="tel:74996426082" class="footer__call"> +7 (499) 642-60-82 </a>
-            <a class="footer__email" href="mailto:info@up-t.ru">info@up-t.ru
-            </a>
-        </div>
-    </div>
-</div>
-</footer> -->
-<!-- Подключаем скрипты проекта -->
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
-<script src="js/script.min.js"></script>
-<script src="js/script.js"></script>
-
 </body>
 
 </html>

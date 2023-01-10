@@ -115,7 +115,7 @@ function images() {
 }
 
 function cleandist() {
-	return del('dist/**/*', { force: true }) // 
+	// return del('dist/**/*', { force: true }) // 
 }
 
 function startwatch() {

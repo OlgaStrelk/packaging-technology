@@ -379,6 +379,18 @@
     .contacts__substrate
         height: 482px
 
+    .ordering
+        &__form
+            flex-direction: column
+
+        &__fieldset:not(:last-child)
+            margin-right: 0
+            margin-bottom: 62px
+
+        &__fieldset-detail
+            align-self: unset
+            width: 70%
+
 @media screen and (max-width: 1134px)
     .header__list-item
         margin-left: 3px
@@ -625,7 +637,7 @@
         width: 342px
         align-self: center
     .solution
-        max-width: 703px
+        // max-width: 703px
         padding: 318px 50px 0 52px
         margin-bottom: 106px
     .solution__text-container
@@ -786,6 +798,24 @@
         margin: 0 auto
         background: #e4e4e4
         border: 1px solid #e4e4e4
+
+    .ordering
+        &__list-item
+            align-items: flex-start
+            label
+                align-self: center
+        &__title_cart
+            font-size: 18px
+        &__title-link
+            display: flex
+            max-width: 180px
+    .footer__ordering
+        .footer
+            &__container
+                padding: 50px 0
+            &__contact
+                max-width: unset
+                margin-bottom: 0
 
 @media screen and (max-width: $breakpoint_small)
 
@@ -950,6 +980,21 @@
     .recommended__caption
         font-size: 15px
         line-height: 22px
+
+    .ordering
+        .wrapper
+            justify-content: space-between
+        .flex
+            flex-direction: column
+            justify-content: space-between
+            align-self: stretch
+            margin-right: 0
+            max-width: 53%
+        &__image-box
+            height: 170px
+            width: 200px
+            margin-right: 10px
+
 @media screen and (max-width: 744px)
     .header__logo
         width: 172px
@@ -1100,6 +1145,16 @@
         width: 390px
     .contacts__title_form
         margin: 0 0 30px 0
+
+    .footer__ordering
+        .footer
+            &__contact
+                flex-direction: column
+        .ordering-contacts
+            display: flex
+            flex-direction: column
+            align-items: center
+
 @media screen and (max-width: 703px)
     .gallery
         grid-template-columns: repeat(2, 185px)
@@ -1118,6 +1173,66 @@
     .gallery__card-description
         font-size: 15px
         line-height: 22px
+
+@media screen and (max-width: 570px)
+    .ordering
+        &__fieldset:not(:last-child)
+            margin-bottom: 10px
+        &__count
+            margin-bottom: 30px
+        &__sum
+            margin-bottom: 0
+        &__text
+            margin-bottom: 0
+        &__fieldset-detail
+            width: 95%
+            padding: 40px 23px
+        &__counter
+            position: absolute
+            right: 0
+            bottom: -100%
+        &__title_cart
+            font-size: 16px
+        .delete
+            position: absolute
+            left: 34%
+            bottom: -70%
+        .wrapper
+            flex-direction: column
+            width: 100%
+            .flex
+                align-items: center
+                position: relative
+                max-width: unset
+                padding-left: 40px
+        &__title-link
+            align-self: baseline
+            max-width: unset
+        &__image-link
+            order: -1
+            margin-bottom: 20px
+        .column
+            min-height: 50px
+            flex-direction: row
+            position: relative
+        &__image-block
+            height: 150px
+            width: 160px
+        &__image-box
+            height: unset
+            width: unset
+            margin-right: 0
+        &__list-item
+            flex-direction: column
+            align-items: center
+            position: relative
+            padding-bottom: 0
+            margin-bottom: 75px
+            label
+                position: absolute
+                left: 2%
+                bottom: 16%
+
 @media screen and (max-width: 431px)
     .gallery
         grid-template-columns: repeat(2, 129px)
